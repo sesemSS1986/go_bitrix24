@@ -2,7 +2,7 @@ package client
 
 import (
 	"github.com/sesemSS1986/go_bitrix24/types"
-	"github.com/sviridoves/go-bitrix/types/users"
+	"github.com/sesemSS1986/go_bitrix24/types/users"
 )
 
 func (c *Client) UserOptionGet(data interface{}) (*types.Response, error) {

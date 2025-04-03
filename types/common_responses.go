@@ -1,12 +1,11 @@
 package types
 
 import (
+	"github.com/pkg/errors"
+	"github.com/sesemSS1986/go_bitrix24/types/crm"
 	"math"
 	"strconv"
 	"time"
-
-	"github.com/pkg/errors"
-	"github.com/sviridoves/go-bitrix/types/crm"
 )
 
 type Response struct {

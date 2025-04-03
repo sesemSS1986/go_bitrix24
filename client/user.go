@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/sviridoves/go-bitrix/types"
+	"github.com/sesemSS1986/go_bitrix24/types"
 	"github.com/sviridoves/go-bitrix/types/users"
 )
 

@@ -1,6 +1,6 @@
 package client
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 func (c *Client) Sonet_group_subjectGet(data interface{}) (*types.Response, error) {
 	resp, err := c.DoRaw("sonet_group_subject.get", data, &types.Response{})

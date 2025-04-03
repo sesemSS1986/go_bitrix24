@@ -9,7 +9,7 @@ import (
 
 	"github.com/asaskevich/govalidator"
 	"github.com/pkg/errors"
-	"github.com/sviridoves/go-bitrix/types"
+	"github.com/sesemSS1986/go_bitrix24/types"
 	"gopkg.in/resty.v1"
 )
 

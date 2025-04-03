@@ -1,6 +1,6 @@
 package client
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 func (c *Client) ForumMessageUserGet(data interface{}) (*types.Response, error) {
 	resp, err := c.DoRaw("forum.message.user.get", data, &types.Response{})

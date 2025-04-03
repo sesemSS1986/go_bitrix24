@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/sviridoves/go-bitrix/client"
-	"github.com/sviridoves/go-bitrix/types/landing"
+	"github.com/sesemSS1986/go_bitrix24/client"
+	"github.com/sesemSS1986/go_bitrix24/types/landing"
 	"log"
 )
 

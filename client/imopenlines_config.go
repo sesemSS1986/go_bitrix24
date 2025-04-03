@@ -1,6 +1,6 @@
 package client
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 func (c *Client) ImopenlinesConfigPathGet(data interface{}) (*types.Response, error) {
 	resp, err := c.DoRaw("imopenlines.config.path.get", data, &types.Response{})

@@ -1,6 +1,6 @@
 package activity_stream
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 type ActivityStreamResponse struct {
 	types.Response

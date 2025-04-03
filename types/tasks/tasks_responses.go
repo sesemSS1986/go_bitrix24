@@ -1,6 +1,6 @@
 package tasks
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 type TasksResponse struct {
 	types.Response

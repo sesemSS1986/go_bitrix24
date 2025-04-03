@@ -1,6 +1,6 @@
 package client
 
-import "github.com/sviridoves/go-bitrix/types"
+import "github.com/sesemSS1986/go_bitrix24/types"
 
 func (c *Client) MobileSettingsTabsSet(data interface{}) (*types.Response, error) {
 	resp, err := c.DoRaw("mobile.settings.tabs.set", data, &types.Response{})

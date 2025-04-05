@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) CrmProductsectionFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.fields", p)
+func (c *Client) CrmProductsectionFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmProductsectionAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.add", p)
+func (c *Client) CrmProductsectionAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmProductsectionGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.get", p)
+func (c *Client) CrmProductsectionGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmProductsectionList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.list", p)
+func (c *Client) CrmProductsectionList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmProductsectionUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.update", p)
+func (c *Client) CrmProductsectionUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmProductsectionDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.productsection.delete", p)
+func (c *Client) CrmProductsectionDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.productsection.delete", p)
 	if err != nil {
 		return nil, err
 	}

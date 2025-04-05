@@ -1,263 +1,296 @@
 package client
 
-func (c *Client) VoximplantUrlGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.url.get", p)
+func (c *Client) VoximplantUrlGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.url.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.get", p)
+func (c *Client) VoximplantSipGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.add", p)
+func (c *Client) VoximplantSipAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.update", p)
+func (c *Client) VoximplantSipUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.delete", p)
+func (c *Client) VoximplantSipDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipStatus(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.status", p)
+func (c *Client) VoximplantSipStatus(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.status", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantSipConnectorStatus(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.sip.connector.status", p)
+func (c *Client) VoximplantSipConnectorStatus(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.sip.connector.status", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantStatisticGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.statistic.get", p)
+func (c *Client) VoximplantStatisticGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.statistic.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.line.outgoing.set", p)
+func (c *Client) VoximplantLineOutgoingSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.line.outgoing.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.line.outgoing.get", p)
+func (c *Client) VoximplantLineOutgoingGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.line.outgoing.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingSipSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.line.outgoing.sip.set", p)
+func (c *Client) VoximplantLineOutgoingSipSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.line.outgoing.sip.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantLineGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.line.get", p)
+func (c *Client) VoximplantLineGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.line.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantTtsVoicesGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.tts.voices.get", p)
+func (c *Client) VoximplantTtsVoicesGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.tts.voices.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantUserGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.user.get", p)
+func (c *Client) VoximplantUserGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.user.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantUserGetdefaultlineid(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.user.getdefaultlineid", p)
+func (c *Client) VoximplantUserGetdefaultlineid(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.user.getdefaultlineid", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantUserActivatephone(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.user.activatephone", p)
+func (c *Client) VoximplantUserActivatephone(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.user.activatephone", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantUserDeactivatephone(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.user.deactivatephone", p)
+func (c *Client) VoximplantUserDeactivatephone(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.user.deactivatephone", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.authorization.get", p)
+func (c *Client) VoximplantAuthorizationGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.authorization.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationSignonetimekey(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.authorization.signonetimekey", p)
+func (c *Client) VoximplantAuthorizationSignonetimekey(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.authorization.signonetimekey", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationOnerror(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.authorization.onerror", p)
+func (c *Client) VoximplantAuthorizationOnerror(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.authorization.onerror", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallInit(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.init", p)
+func (c *Client) VoximplantCallInit(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.init", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallStartwithdevice(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.startwithdevice", p)
+func (c *Client) VoximplantCallStartwithdevice(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.startwithdevice", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallHangupdevice(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.hangupdevice", p)
+func (c *Client) VoximplantCallHangupdevice(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.hangupdevice", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallSendwait(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.sendwait", p)
+func (c *Client) VoximplantCallSendwait(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.sendwait", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallSendready(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.sendready", p)
+func (c *Client) VoximplantCallSendready(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.sendready", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallAnswer(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.answer", p)
+func (c *Client) VoximplantCallAnswer(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.answer", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallSkip(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.skip", p)
+func (c *Client) VoximplantCallSkip(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.skip", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallHold(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.hold", p)
+func (c *Client) VoximplantCallHold(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.hold", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallUnhold(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.unhold", p)
+func (c *Client) VoximplantCallUnhold(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.unhold", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallStartviarest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.startviarest", p)
+func (c *Client) VoximplantCallStartviarest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.startviarest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.get", p)
+func (c *Client) VoximplantCallGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallIntercept(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.intercept", p)
+func (c *Client) VoximplantCallIntercept(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.intercept", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) VoximplantCallSavecomment(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("voximplant.call.savecomment", p)
+func (c *Client) VoximplantCallSavecomment(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"voximplant.call.savecomment", p)
 	if err != nil {
 		return nil, err
 	}

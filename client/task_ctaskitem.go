@@ -1,223 +1,251 @@
 package client
 
-func (c *Client) TaskCtaskitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getmanifest", p)
+func (c *Client) TaskCtaskitemGetmanifest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getlist", p)
+func (c *Client) TaskCtaskitemGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.list", p)
+func (c *Client) TaskCtaskitemList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.add", p)
+func (c *Client) TaskCtaskitemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetexecutiveuserid(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getexecutiveuserid", p)
+func (c *Client) TaskCtaskitemGetexecutiveuserid(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getexecutiveuserid", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdata(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getdata", p)
+func (c *Client) TaskCtaskitemGetdata(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getdata", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdescription(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getdescription", p)
+func (c *Client) TaskCtaskitemGetdescription(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getdescription", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetfiles(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getfiles", p)
+func (c *Client) TaskCtaskitemGetfiles(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getfiles", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAddfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.addfile", p)
+func (c *Client) TaskCtaskitemAddfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.addfile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDeletefile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.deletefile", p)
+func (c *Client) TaskCtaskitemDeletefile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.deletefile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGettags(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.gettags", p)
+func (c *Client) TaskCtaskitemGettags(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.gettags", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdependson(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getdependson", p)
+func (c *Client) TaskCtaskitemGetdependson(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getdependson", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedtaskactions(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getallowedtaskactions", p)
+func (c *Client) TaskCtaskitemGetallowedtaskactions(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getallowedtaskactions", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedactions(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getallowedactions", p)
+func (c *Client) TaskCtaskitemGetallowedactions(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getallowedactions", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedtaskactionsasstrings(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.getallowedtaskactionsasstrings", p)
+func (c *Client) TaskCtaskitemGetallowedtaskactionsasstrings(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.getallowedtaskactionsasstrings", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.isactionallowed", p)
+func (c *Client) TaskCtaskitemIsactionallowed(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.delete", p)
+func (c *Client) TaskCtaskitemDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDelegate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.delegate", p)
+func (c *Client) TaskCtaskitemDelegate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.delegate", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemStartexecution(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.startexecution", p)
+func (c *Client) TaskCtaskitemStartexecution(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.startexecution", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemPauseexecution(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.pauseexecution", p)
+func (c *Client) TaskCtaskitemPauseexecution(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.pauseexecution", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDefer(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.defer", p)
+func (c *Client) TaskCtaskitemDefer(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.defer", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemComplete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.complete", p)
+func (c *Client) TaskCtaskitemComplete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.complete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.update", p)
+func (c *Client) TaskCtaskitemUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemRenew(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.renew", p)
+func (c *Client) TaskCtaskitemRenew(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.renew", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemApprove(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.approve", p)
+func (c *Client) TaskCtaskitemApprove(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.approve", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDisapprove(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.disapprove", p)
+func (c *Client) TaskCtaskitemDisapprove(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.disapprove", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAddtofavorite(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.addtofavorite", p)
+func (c *Client) TaskCtaskitemAddtofavorite(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.addtofavorite", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDeletefromfavorite(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskitem.deletefromfavorite", p)
+func (c *Client) TaskCtaskitemDeletefromfavorite(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskitem.deletefromfavorite", p)
 	if err != nil {
 		return nil, err
 	}

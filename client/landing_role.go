@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) LandingRoleGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.getlist", p)
+func (c *Client) LandingRoleGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingRoleGetrights(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.getrights", p)
+func (c *Client) LandingRoleGetrights(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.getrights", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingRoleSetrights(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.setrights", p)
+func (c *Client) LandingRoleSetrights(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.setrights", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingRoleSetaccesscodes(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.setaccesscodes", p)
+func (c *Client) LandingRoleSetaccesscodes(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.setaccesscodes", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingRoleIsenabled(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.isenabled", p)
+func (c *Client) LandingRoleIsenabled(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.isenabled", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingRoleEnable(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.role.enable", p)
+func (c *Client) LandingRoleEnable(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.role.enable", p)
 	if err != nil {
 		return nil, err
 	}

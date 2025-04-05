@@ -1,71 +1,80 @@
 package client
 
-func (c *Client) ImSearchUserList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.user.list", p)
+func (c *Client) ImSearchUserList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.user.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchUser(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.user", p)
+func (c *Client) ImSearchUser(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.user", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchChatList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.chat.list", p)
+func (c *Client) ImSearchChatList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.chat.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchChat(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.chat", p)
+func (c *Client) ImSearchChat(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.chat", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchDepartmentList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.department.list", p)
+func (c *Client) ImSearchDepartmentList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.department.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchDepartment(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.department", p)
+func (c *Client) ImSearchDepartment(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.department", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchLastGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.last.get", p)
+func (c *Client) ImSearchLastGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.last.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchLastAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.last.add", p)
+func (c *Client) ImSearchLastAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.last.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImSearchLastDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.search.last.delete", p)
+func (c *Client) ImSearchLastDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.search.last.delete", p)
 	if err != nil {
 		return nil, err
 	}

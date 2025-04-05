@@ -1,7 +1,8 @@
 package client
 
-func (c *Client) MessageserviceMessageStatusUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("messageservice.message.status.update", p)
+func (c *Client) MessageserviceMessageStatusUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"messageservice.message.status.update", p)
 	if err != nil {
 		return nil, err
 	}

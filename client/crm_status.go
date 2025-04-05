@@ -1,71 +1,71 @@
 package client
 
-func (c *Client) CrmStatusFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.fields", p)
+func (c *Client) CrmStatusFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.add", p)
+func (c *Client) CrmStatusAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.get", p)
+func (c *Client) CrmStatusGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.list", p)
+func (c *Client) CrmStatusList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.update", p)
+func (c *Client) CrmStatusUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.delete", p)
+func (c *Client) CrmStatusDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusEntityTypes(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.entity.types", p)
+func (c *Client) CrmStatusEntityTypes(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.entity.types", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusEntityItems(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.entity.items", p)
+func (c *Client) CrmStatusEntityItems(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.entity.items", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmStatusExtraFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.status.extra.fields", p)
+func (c *Client) CrmStatusExtraFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.status.extra.fields", p)
 	if err != nil {
 		return nil, err
 	}

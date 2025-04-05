@@ -1,39 +1,39 @@
 package client
 
-func (c *Client) MobileSettingsTabsSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mobile.settings.tabs.set", p)
+func (c *Client) MobileSettingsTabsSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "mobile.settings.tabs.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MobileSettingsEnergySet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mobile.settings.energy.set", p)
+func (c *Client) MobileSettingsEnergySet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "mobile.settings.energy.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MobileSettingsEnergyGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mobile.settings.energy.get", p)
+func (c *Client) MobileSettingsEnergyGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "mobile.settings.energy.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MobileSettingsOtherSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mobile.settings.other.set", p)
+func (c *Client) MobileSettingsOtherSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "mobile.settings.other.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MobileSettingsOtherGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mobile.settings.other.get", p)
+func (c *Client) MobileSettingsOtherGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "mobile.settings.other.get", p)
 	if err != nil {
 		return nil, err
 	}

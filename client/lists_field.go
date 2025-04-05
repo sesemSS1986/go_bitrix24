@@ -1,39 +1,44 @@
 package client
 
-func (c *Client) ListsFieldAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("lists.field.add", p)
+func (c *Client) ListsFieldAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"lists.field.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ListsFieldGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("lists.field.get", p)
+func (c *Client) ListsFieldGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"lists.field.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ListsFieldUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("lists.field.update", p)
+func (c *Client) ListsFieldUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"lists.field.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ListsFieldDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("lists.field.delete", p)
+func (c *Client) ListsFieldDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"lists.field.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ListsFieldTypeGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("lists.field.type.get", p)
+func (c *Client) ListsFieldTypeGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"lists.field.type.get", p)
 	if err != nil {
 		return nil, err
 	}

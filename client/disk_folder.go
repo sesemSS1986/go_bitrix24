@@ -1,111 +1,125 @@
 package client
 
-func (c *Client) DiskFolderGetfields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.getfields", p)
+func (c *Client) DiskFolderGetfields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.getfields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.get", p)
+func (c *Client) DiskFolderGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderGetchildren(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.getchildren", p)
+func (c *Client) DiskFolderGetchildren(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.getchildren", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderAddsubfolder(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.addsubfolder", p)
+func (c *Client) DiskFolderAddsubfolder(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.addsubfolder", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderCopyto(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.copyto", p)
+func (c *Client) DiskFolderCopyto(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.copyto", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderMoveto(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.moveto", p)
+func (c *Client) DiskFolderMoveto(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.moveto", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderRename(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.rename", p)
+func (c *Client) DiskFolderRename(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.rename", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderDeletetree(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.deletetree", p)
+func (c *Client) DiskFolderDeletetree(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.deletetree", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderMarkdeleted(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.markdeleted", p)
+func (c *Client) DiskFolderMarkdeleted(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.markdeleted", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderRestore(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.restore", p)
+func (c *Client) DiskFolderRestore(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.restore", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderUploadfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.uploadfile", p)
+func (c *Client) DiskFolderUploadfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.uploadfile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderGetexternallink(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.getexternallink", p)
+func (c *Client) DiskFolderGetexternallink(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.getexternallink", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderSharetouser(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.sharetouser", p)
+func (c *Client) DiskFolderSharetouser(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.sharetouser", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFolderListallowedoperations(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.folder.listallowedoperations", p)
+func (c *Client) DiskFolderListallowedoperations(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.folder.listallowedoperations", p)
 	if err != nil {
 		return nil, err
 	}

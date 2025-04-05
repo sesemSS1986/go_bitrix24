@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) ImopenlinesConfigPathGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.path.get", p)
+func (c *Client) ImopenlinesConfigPathGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.path.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImopenlinesConfigGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.get", p)
+func (c *Client) ImopenlinesConfigGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImopenlinesConfigListGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.list.get", p)
+func (c *Client) ImopenlinesConfigListGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.list.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImopenlinesConfigUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.update", p)
+func (c *Client) ImopenlinesConfigUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImopenlinesConfigAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.add", p)
+func (c *Client) ImopenlinesConfigAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImopenlinesConfigDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("imopenlines.config.delete", p)
+func (c *Client) ImopenlinesConfigDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"imopenlines.config.delete", p)
 	if err != nil {
 		return nil, err
 	}

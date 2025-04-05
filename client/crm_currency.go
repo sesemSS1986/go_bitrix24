@@ -1,95 +1,107 @@
 package client
 
-func (c *Client) CrmCurrencyFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.fields", p)
+func (c *Client) CrmCurrencyFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.add", p)
+func (c *Client) CrmCurrencyAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.get", p)
+func (c *Client) CrmCurrencyGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.list", p)
+func (c *Client) CrmCurrencyList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.update", p)
+func (c *Client) CrmCurrencyUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.delete", p)
+func (c *Client) CrmCurrencyDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyLocalizationsFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.localizations.fields", p)
+func (c *Client) CrmCurrencyLocalizationsFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.localizations.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyLocalizationsGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.localizations.get", p)
+func (c *Client) CrmCurrencyLocalizationsGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.localizations.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyLocalizationsSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.localizations.set", p)
+func (c *Client) CrmCurrencyLocalizationsSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.localizations.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyLocalizationsDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.localizations.delete", p)
+func (c *Client) CrmCurrencyLocalizationsDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.localizations.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyBaseSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.base.set", p)
+func (c *Client) CrmCurrencyBaseSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.base.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmCurrencyBaseGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.currency.base.get", p)
+func (c *Client) CrmCurrencyBaseGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.currency.base.get", p)
 	if err != nil {
 		return nil, err
 	}

@@ -1,55 +1,55 @@
 package client
 
-func (c *Client) TaskCtaskelapseditemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.getmanifest", p)
+func (c *Client) TaskCtaskelapseditemGetmanifest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.getlist", p)
+func (c *Client) TaskCtaskelapseditemGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.get", p)
+func (c *Client) TaskCtaskelapseditemGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.add", p)
+func (c *Client) TaskCtaskelapseditemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.update", p)
+func (c *Client) TaskCtaskelapseditemUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.delete", p)
+func (c *Client) TaskCtaskelapseditemDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskelapseditem.isactionallowed", p)
+func (c *Client) TaskCtaskelapseditemIsactionallowed(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.ctaskelapseditem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}

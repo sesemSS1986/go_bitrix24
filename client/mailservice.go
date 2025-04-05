@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) MailserviceFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.fields", p)
+func (c *Client) MailserviceFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MailserviceList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.list", p)
+func (c *Client) MailserviceList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MailserviceGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.get", p)
+func (c *Client) MailserviceGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MailserviceAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.add", p)
+func (c *Client) MailserviceAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MailserviceUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.update", p)
+func (c *Client) MailserviceUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) MailserviceDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("mailservice.delete", p)
+func (c *Client) MailserviceDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"mailservice.delete", p)
 	if err != nil {
 		return nil, err
 	}

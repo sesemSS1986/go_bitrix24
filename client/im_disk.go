@@ -1,31 +1,35 @@
 package client
 
-func (c *Client) ImDiskFolderGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.disk.folder.get", p)
+func (c *Client) ImDiskFolderGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.disk.folder.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDiskFileCommit(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.disk.file.commit", p)
+func (c *Client) ImDiskFileCommit(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.disk.file.commit", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDiskFileDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.disk.file.delete", p)
+func (c *Client) ImDiskFileDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.disk.file.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDiskFileSave(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.disk.file.save", p)
+func (c *Client) ImDiskFileSave(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.disk.file.save", p)
 	if err != nil {
 		return nil, err
 	}

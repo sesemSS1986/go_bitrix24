@@ -1,63 +1,63 @@
 package client
 
-func (c *Client) EntityItemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.add", p)
+func (c *Client) EntityItemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.get", p)
+func (c *Client) EntityItemGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.update", p)
+func (c *Client) EntityItemUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.delete", p)
+func (c *Client) EntityItemDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemPropertyAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.property.add", p)
+func (c *Client) EntityItemPropertyAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.property.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemPropertyGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.property.get", p)
+func (c *Client) EntityItemPropertyGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.property.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemPropertyUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.property.update", p)
+func (c *Client) EntityItemPropertyUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.property.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntityItemPropertyDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.item.property.delete", p)
+func (c *Client) EntityItemPropertyDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.item.property.delete", p)
 	if err != nil {
 		return nil, err
 	}

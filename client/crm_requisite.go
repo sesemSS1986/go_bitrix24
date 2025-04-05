@@ -1,287 +1,287 @@
 package client
 
-func (c *Client) CrmRequisiteFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.fields", p)
+func (c *Client) CrmRequisiteFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.add", p)
+func (c *Client) CrmRequisiteAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.get", p)
+func (c *Client) CrmRequisiteGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.list", p)
+func (c *Client) CrmRequisiteList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.update", p)
+func (c *Client) CrmRequisiteUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.delete", p)
+func (c *Client) CrmRequisiteDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.userfield.add", p)
+func (c *Client) CrmRequisiteUserfieldAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.userfield.get", p)
+func (c *Client) CrmRequisiteUserfieldGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.userfield.list", p)
+func (c *Client) CrmRequisiteUserfieldList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.userfield.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.userfield.update", p)
+func (c *Client) CrmRequisiteUserfieldUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.userfield.delete", p)
+func (c *Client) CrmRequisiteUserfieldDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.fields", p)
+func (c *Client) CrmRequisitePresetFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.add", p)
+func (c *Client) CrmRequisitePresetAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.get", p)
+func (c *Client) CrmRequisitePresetGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.list", p)
+func (c *Client) CrmRequisitePresetList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.update", p)
+func (c *Client) CrmRequisitePresetUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.delete", p)
+func (c *Client) CrmRequisitePresetDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetCountries(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.countries", p)
+func (c *Client) CrmRequisitePresetCountries(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.countries", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.fields", p)
+func (c *Client) CrmRequisitePresetFieldFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldAvailabletoadd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.availabletoadd", p)
+func (c *Client) CrmRequisitePresetFieldAvailabletoadd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.availabletoadd", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.add", p)
+func (c *Client) CrmRequisitePresetFieldAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.get", p)
+func (c *Client) CrmRequisitePresetFieldGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.list", p)
+func (c *Client) CrmRequisitePresetFieldList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.update", p)
+func (c *Client) CrmRequisitePresetFieldUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.preset.field.delete", p)
+func (c *Client) CrmRequisitePresetFieldDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.preset.field.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.fields", p)
+func (c *Client) CrmRequisiteBankdetailFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.add", p)
+func (c *Client) CrmRequisiteBankdetailAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.get", p)
+func (c *Client) CrmRequisiteBankdetailGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.list", p)
+func (c *Client) CrmRequisiteBankdetailList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.update", p)
+func (c *Client) CrmRequisiteBankdetailUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.bankdetail.delete", p)
+func (c *Client) CrmRequisiteBankdetailDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.bankdetail.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.link.fields", p)
+func (c *Client) CrmRequisiteLinkFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.link.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.link.list", p)
+func (c *Client) CrmRequisiteLinkList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.link.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.link.get", p)
+func (c *Client) CrmRequisiteLinkGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.link.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkRegister(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.link.register", p)
+func (c *Client) CrmRequisiteLinkRegister(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.link.register", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkUnregister(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.requisite.link.unregister", p)
+func (c *Client) CrmRequisiteLinkUnregister(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "crm.requisite.link.unregister", p)
 	if err != nil {
 		return nil, err
 	}

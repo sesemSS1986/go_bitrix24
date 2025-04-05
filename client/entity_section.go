@@ -1,31 +1,31 @@
 package client
 
-func (c *Client) EntitySectionAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.section.add", p)
+func (c *Client) EntitySectionAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.section.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntitySectionGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.section.get", p)
+func (c *Client) EntitySectionGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.section.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntitySectionUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.section.update", p)
+func (c *Client) EntitySectionUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.section.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) EntitySectionDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("entity.section.delete", p)
+func (c *Client) EntitySectionDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "entity.section.delete", p)
 	if err != nil {
 		return nil, err
 	}

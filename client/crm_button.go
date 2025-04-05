@@ -1,23 +1,26 @@
 package client
 
-func (c *Client) CrmButtonList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.button.list", p)
+func (c *Client) CrmButtonList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.button.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmButtonWidgetsGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.button.widgets.get", p)
+func (c *Client) CrmButtonWidgetsGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.button.widgets.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmButtonGuestRegister(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.button.guest.register", p)
+func (c *Client) CrmButtonGuestRegister(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.button.guest.register", p)
 	if err != nil {
 		return nil, err
 	}

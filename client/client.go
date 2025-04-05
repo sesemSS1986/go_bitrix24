@@ -1,13 +1,8 @@
 package client
 
 import (
-	"crypto/tls"
 	"fmt"
 	"os"
-
-	"github.com/asaskevich/govalidator"
-	"github.com/pkg/errors"
-	"gopkg.in/resty.v1"
 
 	"bytes"
 	"encoding/json"
@@ -17,16 +12,8 @@ import (
 	"strings"
 )
 
-const (
-	BatchLimit     = 45
-	ResponseOffset = 50
-)
-
 type Client struct {
-	AuthClient *resty.Client
-	oAuth      *OAuthData
-	Url        string
-	WebHookUrl string
+	OAuth *OAuthData
 }
 
 type Parameters struct {
@@ -34,19 +21,9 @@ type Parameters struct {
 	File  map[string][]*os.File
 }
 
-type FAuthData struct {
-	ClientId string `valid:"required"`
-	Secret   string `valid:"alphanum,required"`
-}
-
 type OAuthData struct {
-	AuthToken    string `valid:"alphanum,required"`
-	RefreshToken string `valid:"alphanum,required"`
-}
-
-type WebhookAuthData struct {
-	UserID string `valid:"required"`
-	Secret string `valid:"alphanum,required"`
+	AuthToken    string
+	RefreshToken string
 }
 
 type MethodParametr struct {
@@ -54,57 +31,8 @@ type MethodParametr struct {
 	Parametr string
 }
 
-func init() {
-	govalidator.SetFieldsRequiredByDefault(true)
-}
-
-func NewClientWithOAuth(url, authToken, refreshToken string) (*Client, error) {
-
-	auth := &OAuthData{
-		AuthToken:    authToken,
-		RefreshToken: refreshToken,
-	}
-
-	_, err := govalidator.ValidateStruct(auth)
-	if err != nil {
-		return nil, errors.Wrap(err, "Auth params validation failed")
-	}
-
-	return &Client{
-		AuthClient: resty.DefaultClient,
-		Url:        url,
-		oAuth:      auth,
-	}, nil
-}
-
-func NewClientWithWebhookInCome(WebHookUrl string) (*Client, error) {
-
-	return &Client{
-		AuthClient: resty.DefaultClient,
-		Url:        WebHookUrl,
-	}, nil
-}
-
-func NewEnvClientWithOauth() (*Client, error) {
-	return NewClientWithOAuth(
-		os.Getenv("BITRIX_URL"),
-		os.Getenv("BITRIX_AUTH_TOKEN"),
-		os.Getenv("BITRIX_REFRESH_TOKEN"))
-}
-
-func (c *Client) SetInsecureSSL(v bool) {
-	resty.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: v})
-}
-
-func (c *Client) SetDebug(v bool) {
-	resty.SetDebug(v)
-}
-
-// You need to use the method only if the endpoint you want to call is not implemented in this package.
-// If possible, it is necessary to use more specific methods defined in this package to work with Bitrix24 entities.
-// */
-func (c Client) Request(function string, parameters Parameters) (result map[string]interface{}, err error) {
-	responseByte, err := c.callMethod(function, parameters)
+func (c Client) Request(root bool, url, function string, parameters Parameters) (result map[string]interface{}, err error) {
+	responseByte, err := c.callMethod(root, url, function, parameters)
 	if err != nil {
 		return nil, err
 	}
@@ -116,8 +44,8 @@ func (c Client) Request(function string, parameters Parameters) (result map[stri
 }
 
 // The method that actually executes the request to Bitrix24 and passes the response to the calling method.
-func (c Client) callMethod(function string, params Parameters) ([]byte, error) {
-	url := c.WebHookUrl + function + ".json"
+func (c Client) callMethod(root bool, url, function string, params Parameters) ([]byte, error) {
+	u := url + function + ".json"
 	body, writer, err := createFormFields(params)
 	if err != nil {
 		return nil, err
@@ -125,14 +53,29 @@ func (c Client) callMethod(function string, params Parameters) ([]byte, error) {
 
 	client := &http.Client{}
 	request, err := http.NewRequest(
-		"POST", url, bytes.NewReader(body),
+		"POST", u, bytes.NewReader(body),
 	)
 	if err != nil {
 		fmt.Println(err)
 		return nil, err
 	}
 
-	request.Header.Set("Content-Type", writer.FormDataContentType())
+	if root == true {
+		request.Header.Set("Content-Type", writer.FormDataContentType())
+		param := map[string]string{
+			"auth": c.OAuth.AuthToken,
+		}
+
+		q := request.URL.Query()
+		for p, v := range param {
+			q.Set(p, v)
+		}
+		request.URL.RawQuery = q.Encode()
+
+	} else {
+		request.Header.Set("Content-Type", writer.FormDataContentType())
+	}
+
 	response, err := client.Do(request)
 	if err != nil {
 		fmt.Println(err)

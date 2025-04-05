@@ -1,143 +1,161 @@
 package client
 
-func (c *Client) LandingBlockClonecard(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.clonecard", p)
+func (c *Client) LandingBlockClonecard(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.clonecard", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockAddcard(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.addcard", p)
+func (c *Client) LandingBlockAddcard(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.addcard", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockRemovecard(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.removecard", p)
+func (c *Client) LandingBlockRemovecard(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.removecard", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatecards(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.updatecards", p)
+func (c *Client) LandingBlockUpdatecards(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.updatecards", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockChangenodename(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.changenodename", p)
+func (c *Client) LandingBlockChangenodename(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.changenodename", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockChangeanchor(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.changeanchor", p)
+func (c *Client) LandingBlockChangeanchor(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.changeanchor", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatenodes(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.updatenodes", p)
+func (c *Client) LandingBlockUpdatenodes(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.updatenodes", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatestyles(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.updatestyles", p)
+func (c *Client) LandingBlockUpdatestyles(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.updatestyles", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUpdateattrs(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.updateattrs", p)
+func (c *Client) LandingBlockUpdateattrs(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.updateattrs", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetcontent(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getcontent", p)
+func (c *Client) LandingBlockGetcontent(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getcontent", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatecontent(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.updatecontent", p)
+func (c *Client) LandingBlockUpdatecontent(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.updatecontent", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getlist", p)
+func (c *Client) LandingBlockGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetbyid(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getbyid", p)
+func (c *Client) LandingBlockGetbyid(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getbyid", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetmanifest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getmanifest", p)
+func (c *Client) LandingBlockGetmanifest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetmanifestfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getmanifestfile", p)
+func (c *Client) LandingBlockGetmanifestfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getmanifestfile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetcontentfromrepository(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getcontentfromrepository", p)
+func (c *Client) LandingBlockGetcontentfromrepository(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getcontentfromrepository", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockGetrepository(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.getrepository", p)
+func (c *Client) LandingBlockGetrepository(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.getrepository", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingBlockUploadfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.block.uploadfile", p)
+func (c *Client) LandingBlockUploadfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.block.uploadfile", p)
 	if err != nil {
 		return nil, err
 	}

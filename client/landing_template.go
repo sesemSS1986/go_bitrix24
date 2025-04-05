@@ -1,39 +1,44 @@
 package client
 
-func (c *Client) LandingTemplateGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.template.getlist", p)
+func (c *Client) LandingTemplateGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.template.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingTemplateSetsiteref(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.template.setsiteref", p)
+func (c *Client) LandingTemplateSetsiteref(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.template.setsiteref", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingTemplateSetlandingref(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.template.setlandingref", p)
+func (c *Client) LandingTemplateSetlandingref(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.template.setlandingref", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingTemplateGetsiteref(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.template.getsiteref", p)
+func (c *Client) LandingTemplateGetsiteref(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.template.getsiteref", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) LandingTemplateGetlandingref(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("landing.template.getlandingref", p)
+func (c *Client) LandingTemplateGetlandingref(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"landing.template.getlandingref", p)
 	if err != nil {
 		return nil, err
 	}

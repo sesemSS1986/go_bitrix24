@@ -1,103 +1,103 @@
 package client
 
-func (c *Client) DiskFileGetfields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.getfields", p)
+func (c *Client) DiskFileGetfields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.getfields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.get", p)
+func (c *Client) DiskFileGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileCopyto(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.copyto", p)
+func (c *Client) DiskFileCopyto(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.copyto", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileMoveto(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.moveto", p)
+func (c *Client) DiskFileMoveto(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.moveto", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileRename(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.rename", p)
+func (c *Client) DiskFileRename(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.rename", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.delete", p)
+func (c *Client) DiskFileDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileMarkdeleted(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.markdeleted", p)
+func (c *Client) DiskFileMarkdeleted(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.markdeleted", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileRestore(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.restore", p)
+func (c *Client) DiskFileRestore(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.restore", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileUploadversion(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.uploadversion", p)
+func (c *Client) DiskFileUploadversion(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.uploadversion", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileGetexternallink(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.getexternallink", p)
+func (c *Client) DiskFileGetexternallink(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.getexternallink", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileGetversions(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.getversions", p)
+func (c *Client) DiskFileGetversions(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.getversions", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileRestorefromversion(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.restorefromversion", p)
+func (c *Client) DiskFileRestorefromversion(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.restorefromversion", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskFileListallowedoperations(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.file.listallowedoperations", p)
+func (c *Client) DiskFileListallowedoperations(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "disk.file.listallowedoperations", p)
 	if err != nil {
 		return nil, err
 	}

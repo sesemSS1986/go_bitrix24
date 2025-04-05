@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) CrmMeasureFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.fields", p)
+func (c *Client) CrmMeasureFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmMeasureAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.add", p)
+func (c *Client) CrmMeasureAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmMeasureGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.get", p)
+func (c *Client) CrmMeasureGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmMeasureList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.list", p)
+func (c *Client) CrmMeasureList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmMeasureUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.update", p)
+func (c *Client) CrmMeasureUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmMeasureDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.measure.delete", p)
+func (c *Client) CrmMeasureDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.measure.delete", p)
 	if err != nil {
 		return nil, err
 	}

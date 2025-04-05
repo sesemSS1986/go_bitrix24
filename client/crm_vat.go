@@ -1,47 +1,53 @@
 package client
 
-func (c *Client) CrmVatFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.fields", p)
+func (c *Client) CrmVatFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmVatList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.list", p)
+func (c *Client) CrmVatList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmVatGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.get", p)
+func (c *Client) CrmVatGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmVatAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.add", p)
+func (c *Client) CrmVatAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmVatUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.update", p)
+func (c *Client) CrmVatUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) CrmVatDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("crm.vat.delete", p)
+func (c *Client) CrmVatDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"crm.vat.delete", p)
 	if err != nil {
 		return nil, err
 	}

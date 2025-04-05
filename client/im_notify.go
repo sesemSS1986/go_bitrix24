@@ -1,31 +1,35 @@
 package client
 
-func (c *Client) ImNotifyPersonalAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.notify.personal.add", p)
+func (c *Client) ImNotifyPersonalAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.notify.personal.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImNotifySystemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.notify.system.add", p)
+func (c *Client) ImNotifySystemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.notify.system.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImNotifyDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.notify.delete", p)
+func (c *Client) ImNotifyDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.notify.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImNotifyRead(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.notify.read", p)
+func (c *Client) ImNotifyRead(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.notify.read", p)
 	if err != nil {
 		return nil, err
 	}

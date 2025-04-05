@@ -1,15 +1,17 @@
 package client
 
-func (c *Client) UserHistoryList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.history.list", p)
+func (c *Client) UserHistoryList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.history.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserHistoryFieldsList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.history.fields.list", p)
+func (c *Client) UserHistoryFieldsList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.history.fields.list", p)
 	if err != nil {
 		return nil, err
 	}

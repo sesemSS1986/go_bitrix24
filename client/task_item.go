@@ -1,279 +1,279 @@
 package client
 
-func (c *Client) TaskItemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getmanifest", p)
+func (c *Client) TaskItemGetmanifest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getlist", p)
+func (c *Client) TaskItemGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.list", p)
+func (c *Client) TaskItemList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.add", p)
+func (c *Client) TaskItemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetexecutiveuserid(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getexecutiveuserid", p)
+func (c *Client) TaskItemGetexecutiveuserid(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getexecutiveuserid", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetdata(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getdata", p)
+func (c *Client) TaskItemGetdata(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getdata", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetdescription(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getdescription", p)
+func (c *Client) TaskItemGetdescription(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getdescription", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetfiles(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getfiles", p)
+func (c *Client) TaskItemGetfiles(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getfiles", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemAddfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.addfile", p)
+func (c *Client) TaskItemAddfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.addfile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDeletefile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.deletefile", p)
+func (c *Client) TaskItemDeletefile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.deletefile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGettags(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.gettags", p)
+func (c *Client) TaskItemGettags(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.gettags", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetdependson(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getdependson", p)
+func (c *Client) TaskItemGetdependson(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getdependson", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedtaskactions(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getallowedtaskactions", p)
+func (c *Client) TaskItemGetallowedtaskactions(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getallowedtaskactions", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedactions(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getallowedactions", p)
+func (c *Client) TaskItemGetallowedactions(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getallowedactions", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedtaskactionsasstrings(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.getallowedtaskactionsasstrings", p)
+func (c *Client) TaskItemGetallowedtaskactionsasstrings(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.getallowedtaskactionsasstrings", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.isactionallowed", p)
+func (c *Client) TaskItemIsactionallowed(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.delete", p)
+func (c *Client) TaskItemDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDelegate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.delegate", p)
+func (c *Client) TaskItemDelegate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.delegate", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemStartexecution(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.startexecution", p)
+func (c *Client) TaskItemStartexecution(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.startexecution", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemPauseexecution(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.pauseexecution", p)
+func (c *Client) TaskItemPauseexecution(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.pauseexecution", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDefer(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.defer", p)
+func (c *Client) TaskItemDefer(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.defer", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemComplete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.complete", p)
+func (c *Client) TaskItemComplete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.complete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.update", p)
+func (c *Client) TaskItemUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemRenew(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.renew", p)
+func (c *Client) TaskItemRenew(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.renew", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemApprove(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.approve", p)
+func (c *Client) TaskItemApprove(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.approve", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDisapprove(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.disapprove", p)
+func (c *Client) TaskItemDisapprove(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.disapprove", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemAddtofavorite(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.addtofavorite", p)
+func (c *Client) TaskItemAddtofavorite(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.addtofavorite", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemDeletefromfavorite(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.deletefromfavorite", p)
+func (c *Client) TaskItemDeletefromfavorite(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.deletefromfavorite", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.get", p)
+func (c *Client) TaskItemUserfieldGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.getlist", p)
+func (c *Client) TaskItemUserfieldGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.add", p)
+func (c *Client) TaskItemUserfieldAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.update", p)
+func (c *Client) TaskItemUserfieldUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.delete", p)
+func (c *Client) TaskItemUserfieldDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGetfields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.getfields", p)
+func (c *Client) TaskItemUserfieldGetfields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.getfields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGettypes(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.item.userfield.gettypes", p)
+func (c *Client) TaskItemUserfieldGettypes(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "task.item.userfield.gettypes", p)
 	if err != nil {
 		return nil, err
 	}

@@ -1,55 +1,62 @@
 package client
 
-func (c *Client) TaskCtaskcommentitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.getmanifest", p)
+func (c *Client) TaskCtaskcommentitemGetmanifest(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.getlist", p)
+func (c *Client) TaskCtaskcommentitemGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.get", p)
+func (c *Client) TaskCtaskcommentitemGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.add", p)
+func (c *Client) TaskCtaskcommentitemAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.update", p)
+func (c *Client) TaskCtaskcommentitemUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.delete", p)
+func (c *Client) TaskCtaskcommentitemDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("task.ctaskcommentitem.isactionallowed", p)
+func (c *Client) TaskCtaskcommentitemIsactionallowed(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"task.ctaskcommentitem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}

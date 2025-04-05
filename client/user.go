@@ -1,95 +1,107 @@
 package client
 
-func (c *Client) UserOptionGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.option.get", p)
+func (c *Client) UserOptionGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.option.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserOptionSet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.option.set", p)
+func (c *Client) UserOptionSet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.option.set", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserAdmin(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.admin", p)
+func (c *Client) UserAdmin(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.admin", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserAccess(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.access", p)
+func (c *Client) UserAccess(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.access", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserFields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.fields", p)
+func (c *Client) UserFields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.fields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserCurrent(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.current", p)
+func (c *Client) UserCurrent(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.current", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.get", p)
+func (c *Client) UserGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserSearch(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.search", p)
+func (c *Client) UserSearch(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.search", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.add", p)
+func (c *Client) UserAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.update", p)
+func (c *Client) UserUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserOnline(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.online", p)
+func (c *Client) UserOnline(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.online", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) UserCounters(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("user.counters", p)
+func (c *Client) UserCounters(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"user.counters", p)
 	if err != nil {
 		return nil, err
 	}

@@ -1,55 +1,55 @@
 package client
 
-func (c *Client) ImMessageAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.add", p)
+func (c *Client) ImMessageAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.delete", p)
+func (c *Client) ImMessageDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.update", p)
+func (c *Client) ImMessageUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageLike(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.like", p)
+func (c *Client) ImMessageLike(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.like", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageCommand(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.command", p)
+func (c *Client) ImMessageCommand(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.command", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageShare(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.share", p)
+func (c *Client) ImMessageShare(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.share", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImMessageUserGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.message.user.get", p)
+func (c *Client) ImMessageUserGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "im.message.user.get", p)
 	if err != nil {
 		return nil, err
 	}

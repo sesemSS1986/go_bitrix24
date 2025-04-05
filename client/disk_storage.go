@@ -1,71 +1,80 @@
 package client
 
-func (c *Client) DiskStorageGetfields(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.getfields", p)
+func (c *Client) DiskStorageGetfields(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.getfields", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.get", p)
+func (c *Client) DiskStorageGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageRename(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.rename", p)
+func (c *Client) DiskStorageRename(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.rename", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageGetlist(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.getlist", p)
+func (c *Client) DiskStorageGetlist(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.getlist", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageGettypes(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.gettypes", p)
+func (c *Client) DiskStorageGettypes(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.gettypes", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageAddfolder(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.addfolder", p)
+func (c *Client) DiskStorageAddfolder(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.addfolder", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageGetchildren(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.getchildren", p)
+func (c *Client) DiskStorageGetchildren(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.getchildren", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageUploadfile(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.uploadfile", p)
+func (c *Client) DiskStorageUploadfile(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.uploadfile", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) DiskStorageGetforapp(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("disk.storage.getforapp", p)
+func (c *Client) DiskStorageGetforapp(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"disk.storage.getforapp", p)
 	if err != nil {
 		return nil, err
 	}

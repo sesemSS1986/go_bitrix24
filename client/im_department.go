@@ -1,39 +1,44 @@
 package client
 
-func (c *Client) ImDepartmentGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.department.get", p)
+func (c *Client) ImDepartmentGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.department.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDepartmentColleaguesList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.department.colleagues.list", p)
+func (c *Client) ImDepartmentColleaguesList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.department.colleagues.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDepartmentColleaguesGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.department.colleagues.get", p)
+func (c *Client) ImDepartmentColleaguesGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.department.colleagues.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDepartmentManagersGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.department.managers.get", p)
+func (c *Client) ImDepartmentManagersGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.department.managers.get", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) ImDepartmentEmployeesGet(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("im.department.employees.get", p)
+func (c *Client) ImDepartmentEmployeesGet(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url,
+		"im.department.employees.get", p)
 	if err != nil {
 		return nil, err
 	}

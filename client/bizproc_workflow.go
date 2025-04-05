@@ -1,63 +1,63 @@
 package client
 
-func (c *Client) BizprocWorkflowTerminate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.terminate", p)
+func (c *Client) BizprocWorkflowTerminate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.terminate", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowStart(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.start", p)
+func (c *Client) BizprocWorkflowStart(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.start", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowInstanceList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.instance.list", p)
+func (c *Client) BizprocWorkflowInstanceList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.instance.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateList(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.template.list", p)
+func (c *Client) BizprocWorkflowTemplateList(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.template.list", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateAdd(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.template.add", p)
+func (c *Client) BizprocWorkflowTemplateAdd(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.template.add", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateUpdate(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.template.update", p)
+func (c *Client) BizprocWorkflowTemplateUpdate(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.template.update", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateDelete(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.template.delete", p)
+func (c *Client) BizprocWorkflowTemplateDelete(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.template.delete", p)
 	if err != nil {
 		return nil, err
 	}
 	return resp, err
 }
 
-func (c *Client) BizprocWorkflowInstances(p Parameters) (result map[string]interface{}, err error) {
-	resp, err := c.Request("bizproc.workflow.instances", p)
+func (c *Client) BizprocWorkflowInstances(root bool, url string, p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request(root, url, "bizproc.workflow.instances", p)
 	if err != nil {
 		return nil, err
 	}

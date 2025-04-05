@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) ImSearchUserList(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("im.search.user.list", p)
 	if err != nil {

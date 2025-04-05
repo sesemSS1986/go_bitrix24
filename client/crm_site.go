@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) CrmSiteFormFill(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("crm.site.form.fill", p)
 	if err != nil {

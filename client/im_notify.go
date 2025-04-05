@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) ImNotifyPersonalAdd(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("im.notify.personal.add", p)
 	if err != nil {

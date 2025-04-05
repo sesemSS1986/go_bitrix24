@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) CrmTimelineCommentFields(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("crm.timeline.comment.fields", p)
 	if err != nil {

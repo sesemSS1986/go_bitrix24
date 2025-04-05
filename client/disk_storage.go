@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) DiskStorageGetfields(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("disk.storage.getfields", p)
 	if err != nil {

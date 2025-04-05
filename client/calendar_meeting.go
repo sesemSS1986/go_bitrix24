@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) CalendarMeetingStatusSet(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("calendar.meeting.status.set", p)
 	if err != nil {

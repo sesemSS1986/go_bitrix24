@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) Landing_cloudCloudGetrepository(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("landing_cloud.cloud.getrepository", p)
 	if err != nil {

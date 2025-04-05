@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) BizprocActivityAdd(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("bizproc.activity.add", p)
 	if err != nil {

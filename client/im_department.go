@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) ImDepartmentGet(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("im.department.get", p)
 	if err != nil {

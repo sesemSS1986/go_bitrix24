@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) ImbotCommandRegister(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("imbot.command.register", p)
 	if err != nil {

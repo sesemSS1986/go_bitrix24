@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) LandingDemosGetsitelist(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("landing.demos.getsitelist", p)
 	if err != nil {

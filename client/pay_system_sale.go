@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) SalePaysystemHandlerAdd(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("sale.paysystem.handler.add", p)
 	if err != nil {

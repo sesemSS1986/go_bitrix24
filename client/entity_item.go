@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) EntityItemAdd(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("entity.item.add", p)
 	if err != nil {

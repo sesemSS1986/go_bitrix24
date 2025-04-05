@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) TaskCtaskitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("task.ctaskitem.getmanifest", p)
 	if err != nil {

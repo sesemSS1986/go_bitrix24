@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) CrmItemFields(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("crm.item.fields", p)
 	if err != nil {
@@ -26,12 +24,12 @@ func (c *Client) CrmItemGet(p Parameters) (result map[string]interface{}, err er
 	return resp, err
 }
 
-func (c *Client) CrmItemList(data interface{}) (*types.ItemsResponse, error) {
-	resp, err := c.Request("crm.item.list", data, &types.ItemsResponse{})
+func (c *Client) CrmItemList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.item.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.ItemsResponse), err
+	return resp, err
 }
 
 func (c *Client) CrmItemUpdate(p Parameters) (result map[string]interface{}, err error) {

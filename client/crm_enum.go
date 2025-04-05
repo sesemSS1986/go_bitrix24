@@ -1,7 +1,5 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
 func (c *Client) CrmEnumSettingsMode(p Parameters) (result map[string]interface{}, err error) {
 	resp, err := c.Request("crm.enum.settings.mode", p)
 	if err != nil {

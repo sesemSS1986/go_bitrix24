@@ -1,27 +1,25 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
-func (c *Client) AppOptionGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("app.option.get", data, &types.Response{})
+func (c *Client) AppOptionGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("app.option.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) AppOptionSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("app.option.set", data, &types.Response{})
+func (c *Client) AppOptionSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("app.option.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) AppInfo(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("app.info", data, &types.Response{})
+func (c *Client) AppInfo(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("app.info", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

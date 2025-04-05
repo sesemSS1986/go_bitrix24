@@ -2,114 +2,114 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImChatAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.add", data, &types.Response{})
+func (c *Client) ImChatAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.get", data, &types.Response{})
+func (c *Client) ImChatGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatSetowner(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.setowner", data, &types.Response{})
+func (c *Client) ImChatSetowner(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.setowner", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatSetmanager(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.setmanager", data, &types.Response{})
+func (c *Client) ImChatSetmanager(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.setmanager", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUpdatecolor(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.updatecolor", data, &types.Response{})
+func (c *Client) ImChatUpdatecolor(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.updatecolor", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUpdatetitle(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.updatetitle", data, &types.Response{})
+func (c *Client) ImChatUpdatetitle(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.updatetitle", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUpdateavatar(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.updateavatar", data, &types.Response{})
+func (c *Client) ImChatUpdateavatar(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.updateavatar", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatLeave(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.leave", data, &types.Response{})
+func (c *Client) ImChatLeave(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.leave", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUserAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.user.add", data, &types.Response{})
+func (c *Client) ImChatUserAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.user.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUserDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.user.delete", data, &types.Response{})
+func (c *Client) ImChatUserDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.user.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatUserList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.user.list", data, &types.Response{})
+func (c *Client) ImChatUserList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.user.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatSendtyping(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.sendtyping", data, &types.Response{})
+func (c *Client) ImChatSendtyping(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.sendtyping", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatMute(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.mute", data, &types.Response{})
+func (c *Client) ImChatMute(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.mute", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImChatParentJoin(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.chat.parent.join", data, &types.Response{})
+func (c *Client) ImChatParentJoin(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.chat.parent.join", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

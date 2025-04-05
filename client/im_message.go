@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImMessageAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.add", data, &types.Response{})
+func (c *Client) ImMessageAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.delete", data, &types.Response{})
+func (c *Client) ImMessageDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.update", data, &types.Response{})
+func (c *Client) ImMessageUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageLike(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.like", data, &types.Response{})
+func (c *Client) ImMessageLike(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.like", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageCommand(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.command", data, &types.Response{})
+func (c *Client) ImMessageCommand(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.command", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageShare(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.share", data, &types.Response{})
+func (c *Client) ImMessageShare(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.share", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImMessageUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.message.user.get", data, &types.Response{})
+func (c *Client) ImMessageUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.message.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

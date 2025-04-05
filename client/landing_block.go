@@ -2,146 +2,146 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) LandingBlockClonecard(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.clonecard", data, &types.Response{})
+func (c *Client) LandingBlockClonecard(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.clonecard", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockAddcard(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.addcard", data, &types.Response{})
+func (c *Client) LandingBlockAddcard(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.addcard", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockRemovecard(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.removecard", data, &types.Response{})
+func (c *Client) LandingBlockRemovecard(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.removecard", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatecards(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.updatecards", data, &types.Response{})
+func (c *Client) LandingBlockUpdatecards(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.updatecards", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockChangenodename(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.changenodename", data, &types.Response{})
+func (c *Client) LandingBlockChangenodename(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.changenodename", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockChangeanchor(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.changeanchor", data, &types.Response{})
+func (c *Client) LandingBlockChangeanchor(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.changeanchor", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatenodes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.updatenodes", data, &types.Response{})
+func (c *Client) LandingBlockUpdatenodes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.updatenodes", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatestyles(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.updatestyles", data, &types.Response{})
+func (c *Client) LandingBlockUpdatestyles(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.updatestyles", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUpdateattrs(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.updateattrs", data, &types.Response{})
+func (c *Client) LandingBlockUpdateattrs(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.updateattrs", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetcontent(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getcontent", data, &types.Response{})
+func (c *Client) LandingBlockGetcontent(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getcontent", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUpdatecontent(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.updatecontent", data, &types.Response{})
+func (c *Client) LandingBlockUpdatecontent(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.updatecontent", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getlist", data, &types.Response{})
+func (c *Client) LandingBlockGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetbyid(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getbyid", data, &types.Response{})
+func (c *Client) LandingBlockGetbyid(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getbyid", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getmanifest", data, &types.Response{})
+func (c *Client) LandingBlockGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetmanifestfile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getmanifestfile", data, &types.Response{})
+func (c *Client) LandingBlockGetmanifestfile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getmanifestfile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetcontentfromrepository(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getcontentfromrepository", data, &types.Response{})
+func (c *Client) LandingBlockGetcontentfromrepository(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getcontentfromrepository", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockGetrepository(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.getrepository", data, &types.Response{})
+func (c *Client) LandingBlockGetrepository(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.getrepository", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingBlockUploadfile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.block.uploadfile", data, &types.Response{})
+func (c *Client) LandingBlockUploadfile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.block.uploadfile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

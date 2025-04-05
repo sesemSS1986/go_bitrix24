@@ -2,282 +2,282 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskItemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getmanifest", data, &types.Response{})
+func (c *Client) TaskItemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getlist", data, &types.Response{})
+func (c *Client) TaskItemGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.list", data, &types.Response{})
+func (c *Client) TaskItemList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.add", data, &types.Response{})
+func (c *Client) TaskItemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetexecutiveuserid(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getexecutiveuserid", data, &types.Response{})
+func (c *Client) TaskItemGetexecutiveuserid(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getexecutiveuserid", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetdata(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getdata", data, &types.Response{})
+func (c *Client) TaskItemGetdata(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getdata", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetdescription(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getdescription", data, &types.Response{})
+func (c *Client) TaskItemGetdescription(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getdescription", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetfiles(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getfiles", data, &types.Response{})
+func (c *Client) TaskItemGetfiles(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getfiles", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemAddfile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.addfile", data, &types.Response{})
+func (c *Client) TaskItemAddfile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.addfile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDeletefile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.deletefile", data, &types.Response{})
+func (c *Client) TaskItemDeletefile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.deletefile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGettags(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.gettags", data, &types.Response{})
+func (c *Client) TaskItemGettags(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.gettags", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetdependson(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getdependson", data, &types.Response{})
+func (c *Client) TaskItemGetdependson(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getdependson", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedtaskactions(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getallowedtaskactions", data, &types.Response{})
+func (c *Client) TaskItemGetallowedtaskactions(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getallowedtaskactions", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedactions(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getallowedactions", data, &types.Response{})
+func (c *Client) TaskItemGetallowedactions(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getallowedactions", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemGetallowedtaskactionsasstrings(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.getallowedtaskactionsasstrings", data, &types.Response{})
+func (c *Client) TaskItemGetallowedtaskactionsasstrings(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.getallowedtaskactionsasstrings", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemIsactionallowed(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.isactionallowed", data, &types.Response{})
+func (c *Client) TaskItemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.delete", data, &types.Response{})
+func (c *Client) TaskItemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDelegate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.delegate", data, &types.Response{})
+func (c *Client) TaskItemDelegate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.delegate", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemStartexecution(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.startexecution", data, &types.Response{})
+func (c *Client) TaskItemStartexecution(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.startexecution", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemPauseexecution(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.pauseexecution", data, &types.Response{})
+func (c *Client) TaskItemPauseexecution(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.pauseexecution", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDefer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.defer", data, &types.Response{})
+func (c *Client) TaskItemDefer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.defer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemComplete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.complete", data, &types.Response{})
+func (c *Client) TaskItemComplete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.complete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.update", data, &types.Response{})
+func (c *Client) TaskItemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemRenew(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.renew", data, &types.Response{})
+func (c *Client) TaskItemRenew(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.renew", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemApprove(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.approve", data, &types.Response{})
+func (c *Client) TaskItemApprove(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.approve", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDisapprove(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.disapprove", data, &types.Response{})
+func (c *Client) TaskItemDisapprove(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.disapprove", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemAddtofavorite(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.addtofavorite", data, &types.Response{})
+func (c *Client) TaskItemAddtofavorite(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.addtofavorite", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemDeletefromfavorite(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.deletefromfavorite", data, &types.Response{})
+func (c *Client) TaskItemDeletefromfavorite(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.deletefromfavorite", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.get", data, &types.Response{})
+func (c *Client) TaskItemUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.getlist", data, &types.Response{})
+func (c *Client) TaskItemUserfieldGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.add", data, &types.Response{})
+func (c *Client) TaskItemUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.update", data, &types.Response{})
+func (c *Client) TaskItemUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.delete", data, &types.Response{})
+func (c *Client) TaskItemUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGetfields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.getfields", data, &types.Response{})
+func (c *Client) TaskItemUserfieldGetfields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.getfields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskItemUserfieldGettypes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.item.userfield.gettypes", data, &types.Response{})
+func (c *Client) TaskItemUserfieldGettypes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.item.userfield.gettypes", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

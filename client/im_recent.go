@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImRecentGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.recent.get", data, &types.Response{})
+func (c *Client) ImRecentGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.recent.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImRecentList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.recent.list", data, &types.Response{})
+func (c *Client) ImRecentList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.recent.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImRecentPin(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.recent.pin", data, &types.Response{})
+func (c *Client) ImRecentPin(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.recent.pin", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImRecentHide(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.recent.hide", data, &types.Response{})
+func (c *Client) ImRecentHide(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.recent.hide", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImRecentUnread(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.recent.unread", data, &types.Response{})
+func (c *Client) ImRecentUnread(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.recent.unread", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

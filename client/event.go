@@ -2,66 +2,66 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) EventBind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.bind", data, &types.Response{})
+func (c *Client) EventBind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.bind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventUnbind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.unbind", data, &types.Response{})
+func (c *Client) EventUnbind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.unbind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.get", data, &types.Response{})
+func (c *Client) EventGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventOfflineGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.offline.get", data, &types.Response{})
+func (c *Client) EventOfflineGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.offline.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventOfflineClear(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.offline.clear", data, &types.Response{})
+func (c *Client) EventOfflineClear(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.offline.clear", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventOfflineError(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.offline.error", data, &types.Response{})
+func (c *Client) EventOfflineError(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.offline.error", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventOfflineList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.offline.list", data, &types.Response{})
+func (c *Client) EventOfflineList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.offline.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EventTest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("event.test", data, &types.Response{})
+func (c *Client) EventTest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("event.test", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

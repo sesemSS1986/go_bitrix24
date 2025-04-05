@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmVatFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.fields", data, &types.Response{})
+func (c *Client) CrmVatFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmVatList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.list", data, &types.Response{})
+func (c *Client) CrmVatList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmVatGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.get", data, &types.Response{})
+func (c *Client) CrmVatGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmVatAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.add", data, &types.Response{})
+func (c *Client) CrmVatAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmVatUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.update", data, &types.Response{})
+func (c *Client) CrmVatUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmVatDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.vat.delete", data, &types.Response{})
+func (c *Client) CrmVatDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.vat.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

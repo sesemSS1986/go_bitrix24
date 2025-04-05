@@ -2,170 +2,170 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmCompanyFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.fields", data, &types.Response{})
+func (c *Client) CrmCompanyFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.add", data, &types.Response{})
+func (c *Client) CrmCompanyAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.get", data, &types.Response{})
+func (c *Client) CrmCompanyGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
 func (c *Client) CrmCompanyList(data interface{}) (*types.CompaniesResponse, error) {
-	resp, err := c.DoRaw("crm.company.list", data, &types.CompaniesResponse{})
+	resp, err := c.Request("crm.company.list", data, &types.CompaniesResponse{})
 	if err != nil {
 		return nil, err
 	}
 	return resp.Result().(*types.CompaniesResponse), err
 }
 
-func (c *Client) CrmCompanyUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.update", data, &types.Response{})
+func (c *Client) CrmCompanyUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.delete", data, &types.Response{})
+func (c *Client) CrmCompanyDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.fields", data, &types.Response{})
+func (c *Client) CrmCompanyContactFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.add", data, &types.Response{})
+func (c *Client) CrmCompanyContactAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.delete", data, &types.Response{})
+func (c *Client) CrmCompanyContactDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactItemsGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.items.get", data, &types.Response{})
+func (c *Client) CrmCompanyContactItemsGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.items.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactItemsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.items.set", data, &types.Response{})
+func (c *Client) CrmCompanyContactItemsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.items.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyContactItemsDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.contact.items.delete", data, &types.Response{})
+func (c *Client) CrmCompanyContactItemsDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.contact.items.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyUserfieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.userfield.add", data, &types.Response{})
+func (c *Client) CrmCompanyUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyUserfieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.userfield.get", data, &types.Response{})
+func (c *Client) CrmCompanyUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyUserfieldList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.userfield.list", data, &types.Response{})
+func (c *Client) CrmCompanyUserfieldList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.userfield.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyUserfieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.userfield.update", data, &types.Response{})
+func (c *Client) CrmCompanyUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyUserfieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.userfield.delete", data, &types.Response{})
+func (c *Client) CrmCompanyUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyDetailsConfigurationGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.details.configuration.get", data, &types.Response{})
+func (c *Client) CrmCompanyDetailsConfigurationGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.details.configuration.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyDetailsConfigurationSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.details.configuration.set", data, &types.Response{})
+func (c *Client) CrmCompanyDetailsConfigurationSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.details.configuration.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyDetailsConfigurationReset(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.details.configuration.reset", data, &types.Response{})
+func (c *Client) CrmCompanyDetailsConfigurationReset(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.details.configuration.reset", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCompanyDetailsConfigurationForcecommonscopeforall(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.company.details.configuration.forcecommonscopeforall", data, &types.Response{})
+func (c *Client) CrmCompanyDetailsConfigurationForcecommonscopeforall(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.company.details.configuration.forcecommonscopeforall", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

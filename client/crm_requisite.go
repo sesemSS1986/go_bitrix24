@@ -2,290 +2,290 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmRequisiteFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.fields", data, &types.Response{})
+func (c *Client) CrmRequisiteFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.add", data, &types.Response{})
+func (c *Client) CrmRequisiteAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.get", data, &types.Response{})
+func (c *Client) CrmRequisiteGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.list", data, &types.Response{})
+func (c *Client) CrmRequisiteList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.update", data, &types.Response{})
+func (c *Client) CrmRequisiteUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.delete", data, &types.Response{})
+func (c *Client) CrmRequisiteDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.userfield.add", data, &types.Response{})
+func (c *Client) CrmRequisiteUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.userfield.get", data, &types.Response{})
+func (c *Client) CrmRequisiteUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.userfield.list", data, &types.Response{})
+func (c *Client) CrmRequisiteUserfieldList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.userfield.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.userfield.update", data, &types.Response{})
+func (c *Client) CrmRequisiteUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteUserfieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.userfield.delete", data, &types.Response{})
+func (c *Client) CrmRequisiteUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.fields", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.add", data, &types.Response{})
+func (c *Client) CrmRequisitePresetAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.get", data, &types.Response{})
+func (c *Client) CrmRequisitePresetGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.list", data, &types.Response{})
+func (c *Client) CrmRequisitePresetList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.update", data, &types.Response{})
+func (c *Client) CrmRequisitePresetUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.delete", data, &types.Response{})
+func (c *Client) CrmRequisitePresetDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetCountries(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.countries", data, &types.Response{})
+func (c *Client) CrmRequisitePresetCountries(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.countries", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.fields", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldAvailabletoadd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.availabletoadd", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldAvailabletoadd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.availabletoadd", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.add", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.get", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.list", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.update", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisitePresetFieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.preset.field.delete", data, &types.Response{})
+func (c *Client) CrmRequisitePresetFieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.preset.field.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.fields", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.add", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.get", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.list", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.update", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteBankdetailDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.bankdetail.delete", data, &types.Response{})
+func (c *Client) CrmRequisiteBankdetailDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.bankdetail.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.link.fields", data, &types.Response{})
+func (c *Client) CrmRequisiteLinkFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.link.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.link.list", data, &types.Response{})
+func (c *Client) CrmRequisiteLinkList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.link.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.link.get", data, &types.Response{})
+func (c *Client) CrmRequisiteLinkGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.link.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.link.register", data, &types.Response{})
+func (c *Client) CrmRequisiteLinkRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.link.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmRequisiteLinkUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.requisite.link.unregister", data, &types.Response{})
+func (c *Client) CrmRequisiteLinkUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.requisite.link.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

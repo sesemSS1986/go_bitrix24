@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImDepartmentGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.department.get", data, &types.Response{})
+func (c *Client) ImDepartmentGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.department.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDepartmentColleaguesList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.department.colleagues.list", data, &types.Response{})
+func (c *Client) ImDepartmentColleaguesList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.department.colleagues.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDepartmentColleaguesGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.department.colleagues.get", data, &types.Response{})
+func (c *Client) ImDepartmentColleaguesGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.department.colleagues.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDepartmentManagersGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.department.managers.get", data, &types.Response{})
+func (c *Client) ImDepartmentManagersGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.department.managers.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDepartmentEmployeesGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.department.employees.get", data, &types.Response{})
+func (c *Client) ImDepartmentEmployeesGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.department.employees.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,82 +2,82 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmDealcategoryFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.fields", data, &types.Response{})
+func (c *Client) CrmDealcategoryFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.list", data, &types.Response{})
+func (c *Client) CrmDealcategoryList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.add", data, &types.Response{})
+func (c *Client) CrmDealcategoryAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.get", data, &types.Response{})
+func (c *Client) CrmDealcategoryGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.update", data, &types.Response{})
+func (c *Client) CrmDealcategoryUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.delete", data, &types.Response{})
+func (c *Client) CrmDealcategoryDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryStatus(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.status", data, &types.Response{})
+func (c *Client) CrmDealcategoryStatus(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.status", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryStageList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.stage.list", data, &types.Response{})
+func (c *Client) CrmDealcategoryStageList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.stage.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryDefaultGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.default.get", data, &types.Response{})
+func (c *Client) CrmDealcategoryDefaultGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.default.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmDealcategoryDefaultSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.dealcategory.default.set", data, &types.Response{})
+func (c *Client) CrmDealcategoryDefaultSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.dealcategory.default.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

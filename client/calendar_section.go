@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CalendarSectionGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.section.get", data, &types.Response{})
+func (c *Client) CalendarSectionGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.section.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarSectionAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.section.add", data, &types.Response{})
+func (c *Client) CalendarSectionAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.section.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarSectionUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.section.update", data, &types.Response{})
+func (c *Client) CalendarSectionUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.section.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarSectionDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.section.delete", data, &types.Response{})
+func (c *Client) CalendarSectionDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.section.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

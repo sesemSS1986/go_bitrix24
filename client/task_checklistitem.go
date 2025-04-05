@@ -2,82 +2,82 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskChecklistitemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.getmanifest", data, &types.Response{})
+func (c *Client) TaskChecklistitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.get", data, &types.Response{})
+func (c *Client) TaskChecklistitemGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.getlist", data, &types.Response{})
+func (c *Client) TaskChecklistitemGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.add", data, &types.Response{})
+func (c *Client) TaskChecklistitemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.update", data, &types.Response{})
+func (c *Client) TaskChecklistitemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.delete", data, &types.Response{})
+func (c *Client) TaskChecklistitemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemComplete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.complete", data, &types.Response{})
+func (c *Client) TaskChecklistitemComplete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.complete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemRenew(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.renew", data, &types.Response{})
+func (c *Client) TaskChecklistitemRenew(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.renew", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemMoveafteritem(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.moveafteritem", data, &types.Response{})
+func (c *Client) TaskChecklistitemMoveafteritem(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.moveafteritem", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskChecklistitemIsactionallowed(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.checklistitem.isactionallowed", data, &types.Response{})
+func (c *Client) TaskChecklistitemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.checklistitem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

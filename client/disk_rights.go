@@ -2,10 +2,10 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) DiskRightsGettasks(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.rights.gettasks", data, &types.Response{})
+func (c *Client) DiskRightsGettasks(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.rights.gettasks", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

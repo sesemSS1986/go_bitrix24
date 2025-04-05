@@ -1,35 +1,33 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
-func (c *Client) UserfieldtypeList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("userfieldtype.list", data, &types.Response{})
+func (c *Client) UserfieldtypeList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("userfieldtype.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserfieldtypeAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("userfieldtype.add", data, &types.Response{})
+func (c *Client) UserfieldtypeAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("userfieldtype.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserfieldtypeUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("userfieldtype.update", data, &types.Response{})
+func (c *Client) UserfieldtypeUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("userfieldtype.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserfieldtypeDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("userfieldtype.delete", data, &types.Response{})
+func (c *Client) UserfieldtypeDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("userfieldtype.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

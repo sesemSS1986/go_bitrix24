@@ -2,266 +2,266 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) VoximplantUrlGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.url.get", data, &types.Response{})
+func (c *Client) VoximplantUrlGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.url.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.get", data, &types.Response{})
+func (c *Client) VoximplantSipGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.add", data, &types.Response{})
+func (c *Client) VoximplantSipAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.update", data, &types.Response{})
+func (c *Client) VoximplantSipUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.delete", data, &types.Response{})
+func (c *Client) VoximplantSipDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipStatus(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.status", data, &types.Response{})
+func (c *Client) VoximplantSipStatus(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.status", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantSipConnectorStatus(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.sip.connector.status", data, &types.Response{})
+func (c *Client) VoximplantSipConnectorStatus(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.sip.connector.status", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantStatisticGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.statistic.get", data, &types.Response{})
+func (c *Client) VoximplantStatisticGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.statistic.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.line.outgoing.set", data, &types.Response{})
+func (c *Client) VoximplantLineOutgoingSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.line.outgoing.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.line.outgoing.get", data, &types.Response{})
+func (c *Client) VoximplantLineOutgoingGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.line.outgoing.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantLineOutgoingSipSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.line.outgoing.sip.set", data, &types.Response{})
+func (c *Client) VoximplantLineOutgoingSipSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.line.outgoing.sip.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantLineGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.line.get", data, &types.Response{})
+func (c *Client) VoximplantLineGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.line.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantTtsVoicesGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.tts.voices.get", data, &types.Response{})
+func (c *Client) VoximplantTtsVoicesGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.tts.voices.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.user.get", data, &types.Response{})
+func (c *Client) VoximplantUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantUserGetdefaultlineid(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.user.getdefaultlineid", data, &types.Response{})
+func (c *Client) VoximplantUserGetdefaultlineid(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.user.getdefaultlineid", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantUserActivatephone(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.user.activatephone", data, &types.Response{})
+func (c *Client) VoximplantUserActivatephone(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.user.activatephone", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantUserDeactivatephone(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.user.deactivatephone", data, &types.Response{})
+func (c *Client) VoximplantUserDeactivatephone(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.user.deactivatephone", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.authorization.get", data, &types.Response{})
+func (c *Client) VoximplantAuthorizationGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.authorization.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationSignonetimekey(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.authorization.signonetimekey", data, &types.Response{})
+func (c *Client) VoximplantAuthorizationSignonetimekey(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.authorization.signonetimekey", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantAuthorizationOnerror(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.authorization.onerror", data, &types.Response{})
+func (c *Client) VoximplantAuthorizationOnerror(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.authorization.onerror", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallInit(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.init", data, &types.Response{})
+func (c *Client) VoximplantCallInit(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.init", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallStartwithdevice(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.startwithdevice", data, &types.Response{})
+func (c *Client) VoximplantCallStartwithdevice(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.startwithdevice", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallHangupdevice(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.hangupdevice", data, &types.Response{})
+func (c *Client) VoximplantCallHangupdevice(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.hangupdevice", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallSendwait(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.sendwait", data, &types.Response{})
+func (c *Client) VoximplantCallSendwait(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.sendwait", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallSendready(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.sendready", data, &types.Response{})
+func (c *Client) VoximplantCallSendready(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.sendready", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallAnswer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.answer", data, &types.Response{})
+func (c *Client) VoximplantCallAnswer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.answer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallSkip(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.skip", data, &types.Response{})
+func (c *Client) VoximplantCallSkip(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.skip", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallHold(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.hold", data, &types.Response{})
+func (c *Client) VoximplantCallHold(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.hold", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallUnhold(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.unhold", data, &types.Response{})
+func (c *Client) VoximplantCallUnhold(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.unhold", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallStartviarest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.startviarest", data, &types.Response{})
+func (c *Client) VoximplantCallStartviarest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.startviarest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.get", data, &types.Response{})
+func (c *Client) VoximplantCallGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallIntercept(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.intercept", data, &types.Response{})
+func (c *Client) VoximplantCallIntercept(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.intercept", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantCallSavecomment(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.call.savecomment", data, &types.Response{})
+func (c *Client) VoximplantCallSavecomment(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.call.savecomment", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

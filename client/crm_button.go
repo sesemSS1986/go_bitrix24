@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmButtonList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.button.list", data, &types.Response{})
+func (c *Client) CrmButtonList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.button.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmButtonWidgetsGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.button.widgets.get", data, &types.Response{})
+func (c *Client) CrmButtonWidgetsGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.button.widgets.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmButtonGuestRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.button.guest.register", data, &types.Response{})
+func (c *Client) CrmButtonGuestRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.button.guest.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

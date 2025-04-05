@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TelephonyExternallineAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalline.add", data, &types.Response{})
+func (c *Client) TelephonyExternallineAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalline.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternallineUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalline.update", data, &types.Response{})
+func (c *Client) TelephonyExternallineUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalline.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternallineDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalline.delete", data, &types.Response{})
+func (c *Client) TelephonyExternallineDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalline.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternallineGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalline.get", data, &types.Response{})
+func (c *Client) TelephonyExternallineGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalline.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

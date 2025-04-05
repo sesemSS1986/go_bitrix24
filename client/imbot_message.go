@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImbotMessageAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.message.add", data, &types.Response{})
+func (c *Client) ImbotMessageAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.message.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotMessageDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.message.delete", data, &types.Response{})
+func (c *Client) ImbotMessageDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.message.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotMessageUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.message.update", data, &types.Response{})
+func (c *Client) ImbotMessageUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.message.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotMessageLike(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.message.like", data, &types.Response{})
+func (c *Client) ImbotMessageLike(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.message.like", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

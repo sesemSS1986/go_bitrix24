@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MobilePushTypesGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.types.get", data, &types.Response{})
+func (c *Client) MobilePushTypesGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.types.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushConfigGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.config.get", data, &types.Response{})
+func (c *Client) MobilePushConfigGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.config.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushConfigSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.config.set", data, &types.Response{})
+func (c *Client) MobilePushConfigSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.config.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushStatusGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.status.get", data, &types.Response{})
+func (c *Client) MobilePushStatusGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.status.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushStatusSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.status.set", data, &types.Response{})
+func (c *Client) MobilePushStatusSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.status.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushSmartfilterStatusGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.smartfilter.status.get", data, &types.Response{})
+func (c *Client) MobilePushSmartfilterStatusGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.smartfilter.status.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobilePushSmartfilterStatusSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.push.smartfilter.status.set", data, &types.Response{})
+func (c *Client) MobilePushSmartfilterStatusSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.push.smartfilter.status.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

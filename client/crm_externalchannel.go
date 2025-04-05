@@ -2,66 +2,66 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmExternalchannelConnectorFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.connector.fields", data, &types.Response{})
+func (c *Client) CrmExternalchannelConnectorFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.connector.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelConnectorList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.connector.list", data, &types.Response{})
+func (c *Client) CrmExternalchannelConnectorList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.connector.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelConnectorRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.connector.register", data, &types.Response{})
+func (c *Client) CrmExternalchannelConnectorRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.connector.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelConnectorUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.connector.unregister", data, &types.Response{})
+func (c *Client) CrmExternalchannelConnectorUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.connector.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelCompany(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.company", data, &types.Response{})
+func (c *Client) CrmExternalchannelCompany(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.company", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelContact(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.contact", data, &types.Response{})
+func (c *Client) CrmExternalchannelContact(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.contact", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelActivityCompany(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.activity.company", data, &types.Response{})
+func (c *Client) CrmExternalchannelActivityCompany(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.activity.company", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmExternalchannelActivityContact(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.externalchannel.activity.contact", data, &types.Response{})
+func (c *Client) CrmExternalchannelActivityContact(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.externalchannel.activity.contact", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

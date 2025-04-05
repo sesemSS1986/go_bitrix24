@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ListsFieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.field.add", data, &types.Response{})
+func (c *Client) ListsFieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.field.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsFieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.field.get", data, &types.Response{})
+func (c *Client) ListsFieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.field.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsFieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.field.update", data, &types.Response{})
+func (c *Client) ListsFieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.field.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsFieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.field.delete", data, &types.Response{})
+func (c *Client) ListsFieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.field.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsFieldTypeGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.field.type.get", data, &types.Response{})
+func (c *Client) ListsFieldTypeGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.field.type.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

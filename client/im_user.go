@@ -2,74 +2,74 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.get", data, &types.Response{})
+func (c *Client) ImUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserListGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.list.get", data, &types.Response{})
+func (c *Client) ImUserListGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.list.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserBusinessList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.business.list", data, &types.Response{})
+func (c *Client) ImUserBusinessList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.business.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserBusinessGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.business.get", data, &types.Response{})
+func (c *Client) ImUserBusinessGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.business.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserStatusGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.status.get", data, &types.Response{})
+func (c *Client) ImUserStatusGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.status.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserStatusSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.status.set", data, &types.Response{})
+func (c *Client) ImUserStatusSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.status.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserStatusIdleStart(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.status.idle.start", data, &types.Response{})
+func (c *Client) ImUserStatusIdleStart(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.status.idle.start", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserStatusIdleEnd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.status.idle.end", data, &types.Response{})
+func (c *Client) ImUserStatusIdleEnd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.status.idle.end", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImUserStatusIdleContinue(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.user.status.idle.continue", data, &types.Response{})
+func (c *Client) ImUserStatusIdleContinue(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.user.status.idle.continue", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

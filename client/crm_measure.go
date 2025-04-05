@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmMeasureFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.fields", data, &types.Response{})
+func (c *Client) CrmMeasureFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmMeasureAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.add", data, &types.Response{})
+func (c *Client) CrmMeasureAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmMeasureGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.get", data, &types.Response{})
+func (c *Client) CrmMeasureGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmMeasureList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.list", data, &types.Response{})
+func (c *Client) CrmMeasureList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmMeasureUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.update", data, &types.Response{})
+func (c *Client) CrmMeasureUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmMeasureDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.measure.delete", data, &types.Response{})
+func (c *Client) CrmMeasureDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.measure.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

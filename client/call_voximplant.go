@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) VoximplantCallbackStart(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.callback.start", data, &types.Response{})
+func (c *Client) VoximplantCallbackStart(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.callback.start", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantInfocallStartwithtext(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.infocall.startwithtext", data, &types.Response{})
+func (c *Client) VoximplantInfocallStartwithtext(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.infocall.startwithtext", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) VoximplantInfocallStartwithsound(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("voximplant.infocall.startwithsound", data, &types.Response{})
+func (c *Client) VoximplantInfocallStartwithsound(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("voximplant.infocall.startwithsound", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

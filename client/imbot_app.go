@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImbotAppRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.app.register", data, &types.Response{})
+func (c *Client) ImbotAppRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.app.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotAppUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.app.unregister", data, &types.Response{})
+func (c *Client) ImbotAppUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.app.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotAppUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.app.update", data, &types.Response{})
+func (c *Client) ImbotAppUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.app.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MobileSettingsTabsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.settings.tabs.set", data, &types.Response{})
+func (c *Client) MobileSettingsTabsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.settings.tabs.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileSettingsEnergySet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.settings.energy.set", data, &types.Response{})
+func (c *Client) MobileSettingsEnergySet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.settings.energy.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileSettingsEnergyGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.settings.energy.get", data, &types.Response{})
+func (c *Client) MobileSettingsEnergyGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.settings.energy.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileSettingsOtherSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.settings.other.set", data, &types.Response{})
+func (c *Client) MobileSettingsOtherSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.settings.other.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileSettingsOtherGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.settings.other.get", data, &types.Response{})
+func (c *Client) MobileSettingsOtherGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.settings.other.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

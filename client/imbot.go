@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImbotRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.register", data, &types.Response{})
+func (c *Client) ImbotRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.unregister", data, &types.Response{})
+func (c *Client) ImbotUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.update", data, &types.Response{})
+func (c *Client) ImbotUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotSendtyping(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.sendtyping", data, &types.Response{})
+func (c *Client) ImbotSendtyping(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.sendtyping", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

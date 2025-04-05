@@ -2,226 +2,226 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskCtaskitemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getmanifest", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getlist", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.list", data, &types.Response{})
+func (c *Client) TaskCtaskitemList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.add", data, &types.Response{})
+func (c *Client) TaskCtaskitemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetexecutiveuserid(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getexecutiveuserid", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetexecutiveuserid(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getexecutiveuserid", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdata(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getdata", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetdata(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getdata", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdescription(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getdescription", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetdescription(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getdescription", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetfiles(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getfiles", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetfiles(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getfiles", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAddfile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.addfile", data, &types.Response{})
+func (c *Client) TaskCtaskitemAddfile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.addfile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDeletefile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.deletefile", data, &types.Response{})
+func (c *Client) TaskCtaskitemDeletefile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.deletefile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGettags(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.gettags", data, &types.Response{})
+func (c *Client) TaskCtaskitemGettags(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.gettags", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetdependson(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getdependson", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetdependson(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getdependson", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedtaskactions(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getallowedtaskactions", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetallowedtaskactions(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getallowedtaskactions", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedactions(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getallowedactions", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetallowedactions(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getallowedactions", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemGetallowedtaskactionsasstrings(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.getallowedtaskactionsasstrings", data, &types.Response{})
+func (c *Client) TaskCtaskitemGetallowedtaskactionsasstrings(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.getallowedtaskactionsasstrings", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemIsactionallowed(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.isactionallowed", data, &types.Response{})
+func (c *Client) TaskCtaskitemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.delete", data, &types.Response{})
+func (c *Client) TaskCtaskitemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDelegate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.delegate", data, &types.Response{})
+func (c *Client) TaskCtaskitemDelegate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.delegate", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemStartexecution(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.startexecution", data, &types.Response{})
+func (c *Client) TaskCtaskitemStartexecution(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.startexecution", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemPauseexecution(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.pauseexecution", data, &types.Response{})
+func (c *Client) TaskCtaskitemPauseexecution(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.pauseexecution", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDefer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.defer", data, &types.Response{})
+func (c *Client) TaskCtaskitemDefer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.defer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemComplete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.complete", data, &types.Response{})
+func (c *Client) TaskCtaskitemComplete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.complete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.update", data, &types.Response{})
+func (c *Client) TaskCtaskitemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemRenew(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.renew", data, &types.Response{})
+func (c *Client) TaskCtaskitemRenew(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.renew", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemApprove(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.approve", data, &types.Response{})
+func (c *Client) TaskCtaskitemApprove(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.approve", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDisapprove(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.disapprove", data, &types.Response{})
+func (c *Client) TaskCtaskitemDisapprove(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.disapprove", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemAddtofavorite(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.addtofavorite", data, &types.Response{})
+func (c *Client) TaskCtaskitemAddtofavorite(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.addtofavorite", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskitemDeletefromfavorite(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskitem.deletefromfavorite", data, &types.Response{})
+func (c *Client) TaskCtaskitemDeletefromfavorite(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskitem.deletefromfavorite", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

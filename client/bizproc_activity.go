@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) BizprocActivityAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.activity.add", data, &types.Response{})
+func (c *Client) BizprocActivityAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.activity.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocActivityUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.activity.update", data, &types.Response{})
+func (c *Client) BizprocActivityUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.activity.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocActivityDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.activity.delete", data, &types.Response{})
+func (c *Client) BizprocActivityDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.activity.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocActivityLog(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.activity.log", data, &types.Response{})
+func (c *Client) BizprocActivityLog(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.activity.log", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocActivityList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.activity.list", data, &types.Response{})
+func (c *Client) BizprocActivityList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.activity.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

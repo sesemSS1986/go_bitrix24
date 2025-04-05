@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) Landing_cloudCloudGetrepository(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.getrepository", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGetrepository(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.getrepository", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Landing_cloudCloudGetdemositelist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.getdemositelist", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGetdemositelist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.getdemositelist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Landing_cloudCloudGetdemopagelist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.getdemopagelist", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGetdemopagelist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.getdemopagelist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Landing_cloudCloudGeturlpreview(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.geturlpreview", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGeturlpreview(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.geturlpreview", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Landing_cloudCloudGetappitems(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.getappitems", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGetappitems(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.getappitems", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Landing_cloudCloudGetappitemmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing_cloud.cloud.getappitemmanifest", data, &types.Response{})
+func (c *Client) Landing_cloudCloudGetappitemmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing_cloud.cloud.getappitemmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

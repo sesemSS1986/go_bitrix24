@@ -2,122 +2,122 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmProductFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.fields", data, &types.Response{})
+func (c *Client) CrmProductFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.add", data, &types.Response{})
+func (c *Client) CrmProductAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.get", data, &types.Response{})
+func (c *Client) CrmProductGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.list", data, &types.Response{})
+func (c *Client) CrmProductList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.update", data, &types.Response{})
+func (c *Client) CrmProductUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.delete", data, &types.Response{})
+func (c *Client) CrmProductDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyTypes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.types", data, &types.Response{})
+func (c *Client) CrmProductPropertyTypes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.types", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.fields", data, &types.Response{})
+func (c *Client) CrmProductPropertyFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertySettingsFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.settings.fields", data, &types.Response{})
+func (c *Client) CrmProductPropertySettingsFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.settings.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyEnumerationFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.enumeration.fields", data, &types.Response{})
+func (c *Client) CrmProductPropertyEnumerationFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.enumeration.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.add", data, &types.Response{})
+func (c *Client) CrmProductPropertyAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.get", data, &types.Response{})
+func (c *Client) CrmProductPropertyGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.list", data, &types.Response{})
+func (c *Client) CrmProductPropertyList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.update", data, &types.Response{})
+func (c *Client) CrmProductPropertyUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmProductPropertyDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.product.property.delete", data, &types.Response{})
+func (c *Client) CrmProductPropertyDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.product.property.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

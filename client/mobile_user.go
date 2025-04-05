@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MobileUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.user.get", data, &types.Response{})
+func (c *Client) MobileUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileUserCanusetelephony(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.user.canusetelephony", data, &types.Response{})
+func (c *Client) MobileUserCanusetelephony(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.user.canusetelephony", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

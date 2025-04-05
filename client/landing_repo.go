@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) LandingRepoCheckcontent(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.checkcontent", data, &types.Response{})
+func (c *Client) LandingRepoCheckcontent(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.checkcontent", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.register", data, &types.Response{})
+func (c *Client) LandingRepoRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.unregister", data, &types.Response{})
+func (c *Client) LandingRepoUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoGetappinfo(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.getappinfo", data, &types.Response{})
+func (c *Client) LandingRepoGetappinfo(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.getappinfo", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoBind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.bind", data, &types.Response{})
+func (c *Client) LandingRepoBind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.bind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoUnbind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.unbind", data, &types.Response{})
+func (c *Client) LandingRepoUnbind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.unbind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRepoGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.repo.getlist", data, &types.Response{})
+func (c *Client) LandingRepoGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.repo.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

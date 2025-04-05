@@ -2,82 +2,82 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmTimelineCommentFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.fields", data, &types.Response{})
+func (c *Client) CrmTimelineCommentFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineCommentAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.add", data, &types.Response{})
+func (c *Client) CrmTimelineCommentAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineCommentList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.list", data, &types.Response{})
+func (c *Client) CrmTimelineCommentList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineCommentGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.get", data, &types.Response{})
+func (c *Client) CrmTimelineCommentGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineCommentDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.delete", data, &types.Response{})
+func (c *Client) CrmTimelineCommentDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineCommentUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.comment.update", data, &types.Response{})
+func (c *Client) CrmTimelineCommentUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.comment.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineBindingsFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.bindings.fields", data, &types.Response{})
+func (c *Client) CrmTimelineBindingsFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.bindings.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineBindingsList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.bindings.list", data, &types.Response{})
+func (c *Client) CrmTimelineBindingsList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.bindings.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineBindingsBind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.bindings.bind", data, &types.Response{})
+func (c *Client) CrmTimelineBindingsBind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.bindings.bind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTimelineBindingsUnbind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.timeline.bindings.unbind", data, &types.Response{})
+func (c *Client) CrmTimelineBindingsUnbind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.timeline.bindings.unbind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) PlacementList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("placement.list", data, &types.Response{})
+func (c *Client) PlacementList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("placement.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) PlacementBind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("placement.bind", data, &types.Response{})
+func (c *Client) PlacementBind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("placement.bind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) PlacementUnbind(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("placement.unbind", data, &types.Response{})
+func (c *Client) PlacementUnbind(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("placement.unbind", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) PlacementGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("placement.get", data, &types.Response{})
+func (c *Client) PlacementGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("placement.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

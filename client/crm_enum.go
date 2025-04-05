@@ -2,90 +2,90 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmEnumSettingsMode(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.settings.mode", data, &types.Response{})
+func (c *Client) CrmEnumSettingsMode(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.settings.mode", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.fields", data, &types.Response{})
+func (c *Client) CrmEnumFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumOwnertype(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.ownertype", data, &types.Response{})
+func (c *Client) CrmEnumOwnertype(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.ownertype", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumAddresstype(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.addresstype", data, &types.Response{})
+func (c *Client) CrmEnumAddresstype(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.addresstype", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumContenttype(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.contenttype", data, &types.Response{})
+func (c *Client) CrmEnumContenttype(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.contenttype", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumActivitytype(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.activitytype", data, &types.Response{})
+func (c *Client) CrmEnumActivitytype(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.activitytype", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumActivitypriority(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.activitypriority", data, &types.Response{})
+func (c *Client) CrmEnumActivitypriority(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.activitypriority", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumActivitydirection(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.activitydirection", data, &types.Response{})
+func (c *Client) CrmEnumActivitydirection(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.activitydirection", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumActivitynotifytype(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.activitynotifytype", data, &types.Response{})
+func (c *Client) CrmEnumActivitynotifytype(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.activitynotifytype", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumActivitystatus(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.activitystatus", data, &types.Response{})
+func (c *Client) CrmEnumActivitystatus(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.activitystatus", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmEnumEntityeditorConfigurationScope(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.enum.entityeditor.configuration.scope", data, &types.Response{})
+func (c *Client) CrmEnumEntityeditorConfigurationScope(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.enum.entityeditor.configuration.scope", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

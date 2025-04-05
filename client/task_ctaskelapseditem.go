@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskCtaskelapseditemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.getmanifest", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.getlist", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.get", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.add", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.update", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.delete", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskelapseditemIsactionallowed(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskelapseditem.isactionallowed", data, &types.Response{})
+func (c *Client) TaskCtaskelapseditemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskelapseditem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

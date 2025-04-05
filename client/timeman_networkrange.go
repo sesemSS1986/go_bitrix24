@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TimemanNetworkrangeGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.networkrange.get", data, &types.Response{})
+func (c *Client) TimemanNetworkrangeGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.networkrange.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanNetworkrangeSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.networkrange.set", data, &types.Response{})
+func (c *Client) TimemanNetworkrangeSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.networkrange.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanNetworkrangeCheck(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.networkrange.check", data, &types.Response{})
+func (c *Client) TimemanNetworkrangeCheck(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.networkrange.check", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

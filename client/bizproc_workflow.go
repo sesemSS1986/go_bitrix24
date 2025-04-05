@@ -2,66 +2,66 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) BizprocWorkflowTerminate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.terminate", data, &types.Response{})
+func (c *Client) BizprocWorkflowTerminate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.terminate", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowStart(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.start", data, &types.Response{})
+func (c *Client) BizprocWorkflowStart(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.start", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowInstanceList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.instance.list", data, &types.Response{})
+func (c *Client) BizprocWorkflowInstanceList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.instance.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.template.list", data, &types.Response{})
+func (c *Client) BizprocWorkflowTemplateList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.template.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.template.add", data, &types.Response{})
+func (c *Client) BizprocWorkflowTemplateAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.template.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.template.update", data, &types.Response{})
+func (c *Client) BizprocWorkflowTemplateUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.template.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowTemplateDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.template.delete", data, &types.Response{})
+func (c *Client) BizprocWorkflowTemplateDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.template.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) BizprocWorkflowInstances(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("bizproc.workflow.instances", data, &types.Response{})
+func (c *Client) BizprocWorkflowInstances(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("bizproc.workflow.instances", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

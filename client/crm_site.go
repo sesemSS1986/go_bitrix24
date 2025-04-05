@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmSiteFormFill(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.site.form.fill", data, &types.Response{})
+func (c *Client) CrmSiteFormFill(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.site.form.fill", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmSiteFormUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.site.form.user.get", data, &types.Response{})
+func (c *Client) CrmSiteFormUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.site.form.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) LandingRoleGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.getlist", data, &types.Response{})
+func (c *Client) LandingRoleGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRoleGetrights(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.getrights", data, &types.Response{})
+func (c *Client) LandingRoleGetrights(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.getrights", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRoleSetrights(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.setrights", data, &types.Response{})
+func (c *Client) LandingRoleSetrights(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.setrights", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRoleSetaccesscodes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.setaccesscodes", data, &types.Response{})
+func (c *Client) LandingRoleSetaccesscodes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.setaccesscodes", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRoleIsenabled(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.isenabled", data, &types.Response{})
+func (c *Client) LandingRoleIsenabled(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.isenabled", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingRoleEnable(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.role.enable", data, &types.Response{})
+func (c *Client) LandingRoleEnable(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.role.enable", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

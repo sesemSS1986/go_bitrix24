@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) UserHistoryList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.history.list", data, &types.Response{})
+func (c *Client) UserHistoryList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.history.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserHistoryFieldsList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.history.fields.list", data, &types.Response{})
+func (c *Client) UserHistoryFieldsList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.history.fields.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

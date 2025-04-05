@@ -2,66 +2,66 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) EntityItemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.add", data, &types.Response{})
+func (c *Client) EntityItemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.get", data, &types.Response{})
+func (c *Client) EntityItemGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.update", data, &types.Response{})
+func (c *Client) EntityItemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.delete", data, &types.Response{})
+func (c *Client) EntityItemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemPropertyAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.property.add", data, &types.Response{})
+func (c *Client) EntityItemPropertyAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.property.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemPropertyGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.property.get", data, &types.Response{})
+func (c *Client) EntityItemPropertyGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.property.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemPropertyUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.property.update", data, &types.Response{})
+func (c *Client) EntityItemPropertyUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.property.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntityItemPropertyDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.item.property.delete", data, &types.Response{})
+func (c *Client) EntityItemPropertyDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.item.property.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CalendarEventGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.get", data, &types.Response{})
+func (c *Client) CalendarEventGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarEventAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.add", data, &types.Response{})
+func (c *Client) CalendarEventAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarEventUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.update", data, &types.Response{})
+func (c *Client) CalendarEventUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarEventDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.delete", data, &types.Response{})
+func (c *Client) CalendarEventDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarEventGetNearest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.get.nearest", data, &types.Response{})
+func (c *Client) CalendarEventGetNearest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.get.nearest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarEventGetbyid(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.event.getbyid", data, &types.Response{})
+func (c *Client) CalendarEventGetbyid(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.event.getbyid", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

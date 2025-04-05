@@ -2,74 +2,74 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) DiskStorageGetfields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.getfields", data, &types.Response{})
+func (c *Client) DiskStorageGetfields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.getfields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.get", data, &types.Response{})
+func (c *Client) DiskStorageGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageRename(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.rename", data, &types.Response{})
+func (c *Client) DiskStorageRename(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.rename", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.getlist", data, &types.Response{})
+func (c *Client) DiskStorageGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageGettypes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.gettypes", data, &types.Response{})
+func (c *Client) DiskStorageGettypes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.gettypes", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageAddfolder(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.addfolder", data, &types.Response{})
+func (c *Client) DiskStorageAddfolder(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.addfolder", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageGetchildren(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.getchildren", data, &types.Response{})
+func (c *Client) DiskStorageGetchildren(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.getchildren", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageUploadfile(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.uploadfile", data, &types.Response{})
+func (c *Client) DiskStorageUploadfile(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.uploadfile", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskStorageGetforapp(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.storage.getforapp", data, &types.Response{})
+func (c *Client) DiskStorageGetforapp(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.storage.getforapp", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

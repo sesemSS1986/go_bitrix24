@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) FaceClientIdentify(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("face.client.identify", data, &types.Response{})
+func (c *Client) FaceClientIdentify(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("face.client.identify", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) FaceClientAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("face.client.add", data, &types.Response{})
+func (c *Client) FaceClientAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("face.client.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) FaceUserIdentify(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("face.user.identify", data, &types.Response{})
+func (c *Client) FaceUserIdentify(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("face.user.identify", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) FaceUserAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("face.user.add", data, &types.Response{})
+func (c *Client) FaceUserAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("face.user.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) FaceUserDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("face.user.delete", data, &types.Response{})
+func (c *Client) FaceUserDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("face.user.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

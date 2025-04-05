@@ -2,66 +2,66 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImopenlinesWidgetConfigGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.config.get", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetConfigGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.config.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetDialogGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.dialog.get", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetDialogGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.dialog.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetUserRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.user.register", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetUserRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.user.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetUserConsentApply(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.user.consent.apply", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetUserConsentApply(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.user.consent.apply", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.user.get", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetOperatorGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.operator.get", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetOperatorGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.operator.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetVoteSend(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.vote.send", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetVoteSend(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.vote.send", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesWidgetFormSend(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.widget.form.send", data, &types.Response{})
+func (c *Client) ImopenlinesWidgetFormSend(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.widget.form.send", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

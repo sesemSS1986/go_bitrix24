@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MessageserviceSenderAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("messageservice.sender.add", data, &types.Response{})
+func (c *Client) MessageserviceSenderAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("messageservice.sender.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MessageserviceSenderDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("messageservice.sender.delete", data, &types.Response{})
+func (c *Client) MessageserviceSenderDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("messageservice.sender.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MessageserviceSenderList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("messageservice.sender.list", data, &types.Response{})
+func (c *Client) MessageserviceSenderList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("messageservice.sender.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

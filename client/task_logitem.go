@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskLogitemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.logitem.getmanifest", data, &types.Response{})
+func (c *Client) TaskLogitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.logitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskLogitemList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.logitem.list", data, &types.Response{})
+func (c *Client) TaskLogitemList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.logitem.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

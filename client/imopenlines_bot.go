@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImopenlinesBotSessionOperator(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.bot.session.operator", data, &types.Response{})
+func (c *Client) ImopenlinesBotSessionOperator(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.bot.session.operator", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesBotSessionSendMessage(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.bot.session.send.message", data, &types.Response{})
+func (c *Client) ImopenlinesBotSessionSendMessage(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.bot.session.send.message", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesBotSessionMessageSend(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.bot.session.message.send", data, &types.Response{})
+func (c *Client) ImopenlinesBotSessionMessageSend(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.bot.session.message.send", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesBotSessionTransfer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.bot.session.transfer", data, &types.Response{})
+func (c *Client) ImopenlinesBotSessionTransfer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.bot.session.transfer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesBotSessionFinish(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.bot.session.finish", data, &types.Response{})
+func (c *Client) ImopenlinesBotSessionFinish(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.bot.session.finish", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

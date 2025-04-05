@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmAutomationTrigger(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.automation.trigger", data, &types.Response{})
+func (c *Client) CrmAutomationTrigger(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.automation.trigger", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAutomationTriggerAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.automation.trigger.add", data, &types.Response{})
+func (c *Client) CrmAutomationTriggerAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.automation.trigger.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAutomationTriggerList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.automation.trigger.list", data, &types.Response{})
+func (c *Client) CrmAutomationTriggerList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.automation.trigger.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAutomationTriggerDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.automation.trigger.delete", data, &types.Response{})
+func (c *Client) CrmAutomationTriggerDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.automation.trigger.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAutomationTriggerExecute(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.automation.trigger.execute", data, &types.Response{})
+func (c *Client) CrmAutomationTriggerExecute(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.automation.trigger.execute", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

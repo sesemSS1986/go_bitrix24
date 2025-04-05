@@ -2,10 +2,10 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) UserconsentConsentAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("userconsent.consent.add", data, &types.Response{})
+func (c *Client) UserconsentConsentAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("userconsent.consent.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

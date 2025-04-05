@@ -2,74 +2,74 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmStatusFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.fields", data, &types.Response{})
+func (c *Client) CrmStatusFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.add", data, &types.Response{})
+func (c *Client) CrmStatusAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.get", data, &types.Response{})
+func (c *Client) CrmStatusGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.list", data, &types.Response{})
+func (c *Client) CrmStatusList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.update", data, &types.Response{})
+func (c *Client) CrmStatusUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.delete", data, &types.Response{})
+func (c *Client) CrmStatusDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusEntityTypes(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.entity.types", data, &types.Response{})
+func (c *Client) CrmStatusEntityTypes(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.entity.types", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusEntityItems(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.entity.items", data, &types.Response{})
+func (c *Client) CrmStatusEntityItems(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.entity.items", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmStatusExtraFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.status.extra.fields", data, &types.Response{})
+func (c *Client) CrmStatusExtraFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.status.extra.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

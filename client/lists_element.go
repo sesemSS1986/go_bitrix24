@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ListsElementAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.element.add", data, &types.Response{})
+func (c *Client) ListsElementAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.element.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsElementGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.element.get", data, &types.Response{})
+func (c *Client) ListsElementGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.element.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsElementUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.element.update", data, &types.Response{})
+func (c *Client) ListsElementUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.element.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsElementDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.element.delete", data, &types.Response{})
+func (c *Client) ListsElementDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.element.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ListsElementGetFileUrl(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("lists.element.get.file.url", data, &types.Response{})
+func (c *Client) ListsElementGetFileUrl(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("lists.element.get.file.url", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

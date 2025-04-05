@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmTrackingTraceAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.tracking.trace.add", data, &types.Response{})
+func (c *Client) CrmTrackingTraceAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.tracking.trace.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmTrackingTraceDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.tracking.trace.delete", data, &types.Response{})
+func (c *Client) CrmTrackingTraceDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.tracking.trace.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

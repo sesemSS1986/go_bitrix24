@@ -3,14 +3,18 @@ package client
 import (
 	"crypto/tls"
 	"fmt"
-	"net/url"
 	"os"
-	"strconv"
 
 	"github.com/asaskevich/govalidator"
 	"github.com/pkg/errors"
-	"github.com/sesemSS1986/go_bitrix24/types"
 	"gopkg.in/resty.v1"
+
+	"bytes"
+	"encoding/json"
+	"io"
+	"mime/multipart"
+	"net/http"
+	"strings"
 )
 
 const (
@@ -19,15 +23,19 @@ const (
 )
 
 type Client struct {
-	client      *resty.Client
-	fAuth       *FAuthData
-	oAuth       *OAuthData
-	webhookAuth *WebhookAuthData
-	Url         *url.URL
+	AuthClient *resty.Client
+	oAuth      *OAuthData
+	Url        string
+	WebHookUrl string
+}
+
+type Parameters struct {
+	Value map[string][]string
+	File  map[string][]*os.File
 }
 
 type FAuthData struct {
-	ClientId string `valid:"alphanum,required"`
+	ClientId string `valid:"required"`
 	Secret   string `valid:"alphanum,required"`
 }
 
@@ -37,7 +45,7 @@ type OAuthData struct {
 }
 
 type WebhookAuthData struct {
-	UserID int    `valid:"required"`
+	UserID string `valid:"required"`
 	Secret string `valid:"alphanum,required"`
 }
 
@@ -50,72 +58,30 @@ func init() {
 	govalidator.SetFieldsRequiredByDefault(true)
 }
 
-func NewClientWithFirstOAuth(intranetUrl, clientID, secret string) (*Client, error) {
-	u, err := url.Parse(intranetUrl)
-	if err != nil {
-		return nil, errors.Wrap(err, "Error parsing B24 URL")
-	}
-
-	auth := &FAuthData{
-		ClientId: clientID,
-		Secret:   secret,
-	}
-
-	_, err = govalidator.ValidateStruct(auth)
-	if err != nil {
-		return nil, errors.Wrap(err, "Auth params validation failed")
-	}
-
-	return &Client{
-		client: resty.DefaultClient,
-		Url:    u,
-		fAuth:  auth,
-	}, nil
-}
-
-func NewClientWithOAuth(intranetUrl, authToken, refreshToken string) (*Client, error) {
-	u, err := url.Parse(intranetUrl)
-	if err != nil {
-		return nil, errors.Wrap(err, "Error parsing B24 URL")
-	}
+func NewClientWithOAuth(url, authToken, refreshToken string) (*Client, error) {
 
 	auth := &OAuthData{
 		AuthToken:    authToken,
 		RefreshToken: refreshToken,
 	}
 
-	_, err = govalidator.ValidateStruct(auth)
+	_, err := govalidator.ValidateStruct(auth)
 	if err != nil {
 		return nil, errors.Wrap(err, "Auth params validation failed")
 	}
 
 	return &Client{
-		client: resty.DefaultClient,
-		Url:    u,
-		oAuth:  auth,
+		AuthClient: resty.DefaultClient,
+		Url:        url,
+		oAuth:      auth,
 	}, nil
 }
 
-func NewClientWithWebhookAuth(intranetUrl string, userId int, secret string) (*Client, error) {
-	u, err := url.Parse(intranetUrl)
-	if err != nil {
-		return nil, errors.Wrap(err, "Error parsing B24 URL")
-	}
-
-	auth := &WebhookAuthData{
-		UserID: userId,
-		Secret: secret,
-	}
-
-	_, err = govalidator.ValidateStruct(auth)
-	if err != nil {
-		return nil, errors.Wrap(err, "Auth params validation failed")
-	}
+func NewClientWithWebhookInCome(WebHookUrl string) (*Client, error) {
 
 	return &Client{
-		client:      resty.DefaultClient,
-		Url:         u,
-		webhookAuth: auth,
+		AuthClient: resty.DefaultClient,
+		Url:        WebHookUrl,
 	}, nil
 }
 
@@ -126,20 +92,6 @@ func NewEnvClientWithOauth() (*Client, error) {
 		os.Getenv("BITRIX_REFRESH_TOKEN"))
 }
 
-func NewEnvClientWithWebhookAuth() (*Client, error) {
-
-	userId, err := strconv.Atoi(os.Getenv("BITRIX_WEBHOOK_USER"))
-
-	if err != nil {
-		return nil, errors.Wrap(err, "Incorrect User ID")
-	}
-
-	return NewClientWithWebhookAuth(
-		os.Getenv("BITRIX_URL"),
-		userId,
-		os.Getenv("BITRIX_WEBHOOK_SECRET"))
-}
-
 func (c *Client) SetInsecureSSL(v bool) {
 	resty.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: v})
 }
@@ -148,84 +100,88 @@ func (c *Client) SetDebug(v bool) {
 	resty.SetDebug(v)
 }
 
-func (c *Client) DoRaw(method string, reqData interface{}, respData interface{}) (*resty.Response, error) {
-	resty.SetHostURL(c.Url.String())
-	//	resty.SetHeader("Accept", "application/json") // commented because of causing "fatal error: concurrent map writes" with goroutines
-	req := resty.R()
+// You need to use the method only if the endpoint you want to call is not implemented in this package.
+// If possible, it is necessary to use more specific methods defined in this package to work with Bitrix24 entities.
+// */
+func (c Client) Request(function string, parameters Parameters) (result map[string]interface{}, err error) {
+	responseByte, err := c.callMethod(function, parameters)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(responseByte, &result)
+	if err != nil {
+		return nil, err
+	}
+	return
+}
 
-	var endpoint string
-	if c.webhookAuth != nil {
-		endpoint = fmt.Sprintf("/rest/%d/%s/%s", c.webhookAuth.UserID, c.webhookAuth.Secret, method)
-	} else {
-		endpoint = fmt.Sprintf("/rest/%s", method)
+// The method that actually executes the request to Bitrix24 and passes the response to the calling method.
+func (c Client) callMethod(function string, params Parameters) ([]byte, error) {
+	url := c.WebHookUrl + function + ".json"
+	body, writer, err := createFormFields(params)
+	if err != nil {
+		return nil, err
+	}
 
-		params := map[string]string{
-			"auth": c.oAuth.AuthToken,
+	client := &http.Client{}
+	request, err := http.NewRequest(
+		"POST", url, bytes.NewReader(body),
+	)
+	if err != nil {
+		fmt.Println(err)
+		return nil, err
+	}
+
+	request.Header.Set("Content-Type", writer.FormDataContentType())
+	response, err := client.Do(request)
+	if err != nil {
+		fmt.Println(err)
+		return nil, err
+	}
+	defer response.Body.Close()
+
+	bytes, err := io.ReadAll(response.Body)
+	if err != nil {
+		fmt.Println("Ошибка")
+		return nil, err
+	}
+
+	return bytes, nil
+}
+
+// Creates form fields from the "Parameters" type in the "multipart/form-data" format.
+func createFormFields(p Parameters) ([]byte, *multipart.Writer, error) {
+	buffer := &bytes.Buffer{}
+	writer := multipart.NewWriter(buffer)
+
+	for key, values := range p.Value {
+		for _, value := range values {
+			fw, err := writer.CreateFormField(key)
+			if err != nil {
+				return nil, nil, err
+			}
+			_, err = io.Copy(fw, strings.NewReader(value))
+			if err != nil {
+				return nil, nil, err
+			}
 		}
 
-		req.SetQueryParams(params)
 	}
 
-	if respData != nil {
-		req.SetResult(respData)
+	for key, files := range p.File {
+		for _, file := range files {
+			fw, err := writer.CreateFormFile(key, file.Name())
+			if err != nil {
+				return nil, nil, err
+			}
+			_, err = io.Copy(fw, file)
+			if err != nil {
+				return nil, nil, err
+			}
+		}
+
 	}
 
-	req.SetError(&types.ResponseError{})
-
-	// values, err := query.Values(reqData)
-	// if err != nil {
-	// 	return nil, errors.Wrap(err, "Error encoding form")
-	// }
-
-	resp, err := req.
-		SetBody(reqData).
-		Post(endpoint)
-
-	if err != nil {
-		return nil, errors.Wrap(err, "Error posting data")
-	}
-
-	if resp.IsError() {
-		error := resp.Error().(*types.ResponseError)
-		return resp, errors.New(fmt.Sprintf("REST method error (%s): %s", error.Code, error.Description))
-	}
-
-	return resp, err
-}
-
-func (c *Client) Do(method string, reqData interface{}, respData interface{}) (interface{}, error) {
-	resp, err := c.DoRaw(method, reqData, respData)
-	return resp.Result(), err
-}
-
-func (c *Client) PaginationData(methodList map[string]MethodParametr, reqData interface{}, respData interface{}) (*resty.Response, error) {
-	Method := fmt.Sprintf("batch.json?halt:%d&", 0)
-	Params := url.Values{}
-	for i := 0; i < len(methodList); i++ {
-		dataRequestNum := fmt.Sprintf("DataRequest%d", i)
-		Params.Add((fmt.Sprintf("cmd[%s]", dataRequestNum)), (fmt.Sprintf("%s%s", methodList[dataRequestNum].Method, methodList[dataRequestNum].Parametr)))
-	}
-	url := fmt.Sprintf("%s/rest/%d/%s/", resty.SetHostURL(c.Url.String()).HostURL, c.webhookAuth.UserID, c.webhookAuth.Secret)
-	webhook := fmt.Sprintf("%s%s%s", url, Method, Params.Encode())
-
-	req := resty.R()
-	if respData != nil {
-		req.SetResult(respData)
-	}
-	req.SetError(&types.ResponseError{})
-
-	resp, err := req.
-		SetBody(reqData).
-		Post(webhook)
-
-	if err != nil {
-		return nil, errors.Wrap(err, "Error posting data")
-	}
-
-	if resp.IsError() {
-		error := resp.Error().(*types.ResponseError)
-		return resp, errors.New(fmt.Sprintf("REST method error (%s): %s", error.Code, error.Description))
-	}
-
-	return resp, err
+	writer.Close()
+	return buffer.Bytes(), writer, nil
 }

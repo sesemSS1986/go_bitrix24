@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImDiskFolderGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.disk.folder.get", data, &types.Response{})
+func (c *Client) ImDiskFolderGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.disk.folder.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDiskFileCommit(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.disk.file.commit", data, &types.Response{})
+func (c *Client) ImDiskFileCommit(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.disk.file.commit", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDiskFileDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.disk.file.delete", data, &types.Response{})
+func (c *Client) ImDiskFileDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.disk.file.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDiskFileSave(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.disk.file.save", data, &types.Response{})
+func (c *Client) ImDiskFileSave(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.disk.file.save", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

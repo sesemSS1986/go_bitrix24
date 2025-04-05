@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MobileDiskFolderGetchildren(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.disk.folder.getchildren", data, &types.Response{})
+func (c *Client) MobileDiskFolderGetchildren(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.disk.folder.getchildren", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MobileDiskGetattachmentsdata(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mobile.disk.getattachmentsdata", data, &types.Response{})
+func (c *Client) MobileDiskGetattachmentsdata(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mobile.disk.getattachmentsdata", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

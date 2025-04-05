@@ -2,154 +2,154 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmQuoteFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.fields", data, &types.Response{})
+func (c *Client) CrmQuoteFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.add", data, &types.Response{})
+func (c *Client) CrmQuoteAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.get", data, &types.Response{})
+func (c *Client) CrmQuoteGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.list", data, &types.Response{})
+func (c *Client) CrmQuoteList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.update", data, &types.Response{})
+func (c *Client) CrmQuoteUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.delete", data, &types.Response{})
+func (c *Client) CrmQuoteDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteProductrowsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.productrows.set", data, &types.Response{})
+func (c *Client) CrmQuoteProductrowsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.productrows.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteProductrowsGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.productrows.get", data, &types.Response{})
+func (c *Client) CrmQuoteProductrowsGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.productrows.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.fields", data, &types.Response{})
+func (c *Client) CrmQuoteContactFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.add", data, &types.Response{})
+func (c *Client) CrmQuoteContactAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.delete", data, &types.Response{})
+func (c *Client) CrmQuoteContactDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactItemsGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.items.get", data, &types.Response{})
+func (c *Client) CrmQuoteContactItemsGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.items.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactItemsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.items.set", data, &types.Response{})
+func (c *Client) CrmQuoteContactItemsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.items.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteContactItemsDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.contact.items.delete", data, &types.Response{})
+func (c *Client) CrmQuoteContactItemsDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.contact.items.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUserfieldAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.userfield.add", data, &types.Response{})
+func (c *Client) CrmQuoteUserfieldAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.userfield.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUserfieldGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.userfield.get", data, &types.Response{})
+func (c *Client) CrmQuoteUserfieldGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.userfield.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUserfieldList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.userfield.list", data, &types.Response{})
+func (c *Client) CrmQuoteUserfieldList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.userfield.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUserfieldUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.userfield.update", data, &types.Response{})
+func (c *Client) CrmQuoteUserfieldUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.userfield.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmQuoteUserfieldDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.quote.userfield.delete", data, &types.Response{})
+func (c *Client) CrmQuoteUserfieldDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.quote.userfield.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

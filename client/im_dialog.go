@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImDialogGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.get", data, &types.Response{})
+func (c *Client) ImDialogGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogMessagesGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.messages.get", data, &types.Response{})
+func (c *Client) ImDialogMessagesGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.messages.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogUsersGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.users.get", data, &types.Response{})
+func (c *Client) ImDialogUsersGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.users.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogRead(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.read", data, &types.Response{})
+func (c *Client) ImDialogRead(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.read", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogReadall(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.readall", data, &types.Response{})
+func (c *Client) ImDialogReadall(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.readall", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogUnread(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.unread", data, &types.Response{})
+func (c *Client) ImDialogUnread(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.unread", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImDialogWriting(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("im.dialog.writing", data, &types.Response{})
+func (c *Client) ImDialogWriting(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("im.dialog.writing", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

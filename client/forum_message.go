@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ForumMessageUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("forum.message.user.get", data, &types.Response{})
+func (c *Client) ForumMessageUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("forum.message.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ForumMessageDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("forum.message.delete", data, &types.Response{})
+func (c *Client) ForumMessageDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("forum.message.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

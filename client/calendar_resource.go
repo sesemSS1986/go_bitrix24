@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CalendarResourceList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.resource.list", data, &types.Response{})
+func (c *Client) CalendarResourceList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.resource.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarResourceAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.resource.add", data, &types.Response{})
+func (c *Client) CalendarResourceAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.resource.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarResourceUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.resource.update", data, &types.Response{})
+func (c *Client) CalendarResourceUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.resource.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarResourceDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.resource.delete", data, &types.Response{})
+func (c *Client) CalendarResourceDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.resource.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarResourceBookingList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.resource.booking.list", data, &types.Response{})
+func (c *Client) CalendarResourceBookingList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.resource.booking.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

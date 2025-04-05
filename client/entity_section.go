@@ -2,34 +2,34 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) EntitySectionAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.section.add", data, &types.Response{})
+func (c *Client) EntitySectionAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.section.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntitySectionGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.section.get", data, &types.Response{})
+func (c *Client) EntitySectionGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.section.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntitySectionUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.section.update", data, &types.Response{})
+func (c *Client) EntitySectionUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.section.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) EntitySectionDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("entity.section.delete", data, &types.Response{})
+func (c *Client) EntitySectionDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("entity.section.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) Sonet_groupUserGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.get", data, &types.Response{})
+func (c *Client) Sonet_groupUserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserInvite(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.invite", data, &types.Response{})
+func (c *Client) Sonet_groupUserInvite(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.invite", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserRequest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.request", data, &types.Response{})
+func (c *Client) Sonet_groupUserRequest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.request", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.add", data, &types.Response{})
+func (c *Client) Sonet_groupUserAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.update", data, &types.Response{})
+func (c *Client) Sonet_groupUserUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.delete", data, &types.Response{})
+func (c *Client) Sonet_groupUserDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) Sonet_groupUserGroups(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("sonet_group.user.groups", data, &types.Response{})
+func (c *Client) Sonet_groupUserGroups(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("sonet_group.user.groups", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

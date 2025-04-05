@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) LandingTemplateGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.template.getlist", data, &types.Response{})
+func (c *Client) LandingTemplateGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.template.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingTemplateSetsiteref(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.template.setsiteref", data, &types.Response{})
+func (c *Client) LandingTemplateSetsiteref(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.template.setsiteref", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingTemplateSetlandingref(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.template.setlandingref", data, &types.Response{})
+func (c *Client) LandingTemplateSetlandingref(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.template.setlandingref", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingTemplateGetsiteref(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.template.getsiteref", data, &types.Response{})
+func (c *Client) LandingTemplateGetsiteref(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.template.getsiteref", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingTemplateGetlandingref(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.template.getlandingref", data, &types.Response{})
+func (c *Client) LandingTemplateGetlandingref(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.template.getlandingref", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

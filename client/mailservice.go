@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) MailserviceFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.fields", data, &types.Response{})
+func (c *Client) MailserviceFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MailserviceList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.list", data, &types.Response{})
+func (c *Client) MailserviceList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MailserviceGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.get", data, &types.Response{})
+func (c *Client) MailserviceGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MailserviceAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.add", data, &types.Response{})
+func (c *Client) MailserviceAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MailserviceUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.update", data, &types.Response{})
+func (c *Client) MailserviceUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) MailserviceDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("mailservice.delete", data, &types.Response{})
+func (c *Client) MailserviceDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("mailservice.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

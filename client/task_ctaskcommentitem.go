@@ -2,58 +2,58 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TaskCtaskcommentitemGetmanifest(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.getmanifest", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemGetmanifest(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.getmanifest", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.getlist", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.get", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.add", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.update", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.delete", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TaskCtaskcommentitemIsactionallowed(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("task.ctaskcommentitem.isactionallowed", data, &types.Response{})
+func (c *Client) TaskCtaskcommentitemIsactionallowed(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("task.ctaskcommentitem.isactionallowed", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

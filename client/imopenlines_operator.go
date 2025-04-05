@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImopenlinesOperatorAnswer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.operator.answer", data, &types.Response{})
+func (c *Client) ImopenlinesOperatorAnswer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.operator.answer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesOperatorSkip(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.operator.skip", data, &types.Response{})
+func (c *Client) ImopenlinesOperatorSkip(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.operator.skip", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesOperatorSpam(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.operator.spam", data, &types.Response{})
+func (c *Client) ImopenlinesOperatorSpam(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.operator.spam", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesOperatorTransfer(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.operator.transfer", data, &types.Response{})
+func (c *Client) ImopenlinesOperatorTransfer(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.operator.transfer", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImopenlinesOperatorFinish(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imopenlines.operator.finish", data, &types.Response{})
+func (c *Client) ImopenlinesOperatorFinish(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imopenlines.operator.finish", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

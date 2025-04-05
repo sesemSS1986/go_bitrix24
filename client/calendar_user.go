@@ -2,18 +2,18 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CalendarUserSettingsGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.user.settings.get", data, &types.Response{})
+func (c *Client) CalendarUserSettingsGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.user.settings.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarUserSettingsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.user.settings.set", data, &types.Response{})
+func (c *Client) CalendarUserSettingsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.user.settings.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmCatalogFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.catalog.fields", data, &types.Response{})
+func (c *Client) CrmCatalogFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.catalog.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCatalogGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.catalog.get", data, &types.Response{})
+func (c *Client) CrmCatalogGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.catalog.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmCatalogList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.catalog.list", data, &types.Response{})
+func (c *Client) CrmCatalogList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.catalog.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) PullApplicationConfigGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("pull.application.config.get", data, &types.Response{})
+func (c *Client) PullApplicationConfigGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("pull.application.config.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) PullApplicationEventAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("pull.application.event.add", data, &types.Response{})
+func (c *Client) PullApplicationEventAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("pull.application.event.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) PullApplicationPushAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("pull.application.push.add", data, &types.Response{})
+func (c *Client) PullApplicationPushAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("pull.application.push.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

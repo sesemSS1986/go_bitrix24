@@ -2,50 +2,50 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) LandingDemosGetsitelist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.getsitelist", data, &types.Response{})
+func (c *Client) LandingDemosGetsitelist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.getsitelist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingDemosGetpagelist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.getpagelist", data, &types.Response{})
+func (c *Client) LandingDemosGetpagelist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.getpagelist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingDemosGeturlpreview(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.geturlpreview", data, &types.Response{})
+func (c *Client) LandingDemosGeturlpreview(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.geturlpreview", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingDemosRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.register", data, &types.Response{})
+func (c *Client) LandingDemosRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingDemosUnregister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.unregister", data, &types.Response{})
+func (c *Client) LandingDemosUnregister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.unregister", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) LandingDemosGetlist(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("landing.demos.getlist", data, &types.Response{})
+func (c *Client) LandingDemosGetlist(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("landing.demos.getlist", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

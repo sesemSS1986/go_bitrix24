@@ -2,106 +2,106 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) DiskFileGetfields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.getfields", data, &types.Response{})
+func (c *Client) DiskFileGetfields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.getfields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.get", data, &types.Response{})
+func (c *Client) DiskFileGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileCopyto(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.copyto", data, &types.Response{})
+func (c *Client) DiskFileCopyto(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.copyto", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileMoveto(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.moveto", data, &types.Response{})
+func (c *Client) DiskFileMoveto(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.moveto", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileRename(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.rename", data, &types.Response{})
+func (c *Client) DiskFileRename(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.rename", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.delete", data, &types.Response{})
+func (c *Client) DiskFileDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileMarkdeleted(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.markdeleted", data, &types.Response{})
+func (c *Client) DiskFileMarkdeleted(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.markdeleted", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileRestore(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.restore", data, &types.Response{})
+func (c *Client) DiskFileRestore(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.restore", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileUploadversion(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.uploadversion", data, &types.Response{})
+func (c *Client) DiskFileUploadversion(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.uploadversion", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileGetexternallink(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.getexternallink", data, &types.Response{})
+func (c *Client) DiskFileGetexternallink(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.getexternallink", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileGetversions(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.getversions", data, &types.Response{})
+func (c *Client) DiskFileGetversions(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.getversions", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileRestorefromversion(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.restorefromversion", data, &types.Response{})
+func (c *Client) DiskFileRestorefromversion(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.restorefromversion", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DiskFileListallowedoperations(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("disk.file.listallowedoperations", data, &types.Response{})
+func (c *Client) DiskFileListallowedoperations(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("disk.file.listallowedoperations", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

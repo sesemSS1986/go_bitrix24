@@ -2,98 +2,98 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) ImbotChatAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.add", data, &types.Response{})
+func (c *Client) ImbotChatAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.get", data, &types.Response{})
+func (c *Client) ImbotChatGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatSetowner(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.setowner", data, &types.Response{})
+func (c *Client) ImbotChatSetowner(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.setowner", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatSetmanager(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.setmanager", data, &types.Response{})
+func (c *Client) ImbotChatSetmanager(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.setmanager", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUpdatecolor(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.updatecolor", data, &types.Response{})
+func (c *Client) ImbotChatUpdatecolor(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.updatecolor", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUpdatetitle(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.updatetitle", data, &types.Response{})
+func (c *Client) ImbotChatUpdatetitle(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.updatetitle", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUpdateavatar(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.updateavatar", data, &types.Response{})
+func (c *Client) ImbotChatUpdateavatar(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.updateavatar", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatLeave(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.leave", data, &types.Response{})
+func (c *Client) ImbotChatLeave(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.leave", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUserAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.user.add", data, &types.Response{})
+func (c *Client) ImbotChatUserAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.user.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUserDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.user.delete", data, &types.Response{})
+func (c *Client) ImbotChatUserDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.user.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatUserList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.user.list", data, &types.Response{})
+func (c *Client) ImbotChatUserList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.user.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) ImbotChatSendtyping(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("imbot.chat.sendtyping", data, &types.Response{})
+func (c *Client) ImbotChatSendtyping(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("imbot.chat.sendtyping", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) DepartmentFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("department.fields", data, &types.Response{})
+func (c *Client) DepartmentFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("department.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DepartmentGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("department.get", data, &types.Response{})
+func (c *Client) DepartmentGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("department.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DepartmentAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("department.add", data, &types.Response{})
+func (c *Client) DepartmentAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("department.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DepartmentUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("department.update", data, &types.Response{})
+func (c *Client) DepartmentUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("department.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) DepartmentDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("department.delete", data, &types.Response{})
+func (c *Client) DepartmentDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("department.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

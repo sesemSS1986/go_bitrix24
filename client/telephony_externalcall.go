@@ -1,51 +1,49 @@
 package client
 
-import "github.com/sesemSS1986/go_bitrix24/types"
-
-func (c *Client) TelephonyExternalcallSearchcrmentities(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.searchcrmentities", data, &types.Response{})
+func (c *Client) TelephonyExternalcallSearchcrmentities(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.searchcrmentities", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternalcallRegister(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.register", data, &types.Response{})
+func (c *Client) TelephonyExternalcallRegister(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.register", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternalcallFinish(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.finish", data, &types.Response{})
+func (c *Client) TelephonyExternalcallFinish(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.finish", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternalcallShow(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.show", data, &types.Response{})
+func (c *Client) TelephonyExternalcallShow(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.show", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternalcallHide(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.hide", data, &types.Response{})
+func (c *Client) TelephonyExternalcallHide(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.hide", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TelephonyExternalcallAttachrecord(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("telephony.externalcall.attachrecord", data, &types.Response{})
+func (c *Client) TelephonyExternalcallAttachrecord(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("telephony.externalcall.attachrecord", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

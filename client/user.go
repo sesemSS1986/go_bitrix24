@@ -1,102 +1,97 @@
 package client
 
-import (
-	"github.com/sesemSS1986/go_bitrix24/types"
-	"github.com/sesemSS1986/go_bitrix24/types/users"
-)
-
-func (c *Client) UserOptionGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.option.get", data, &types.Response{})
+func (c *Client) UserOptionGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.option.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserOptionSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.option.set", data, &types.Response{})
+func (c *Client) UserOptionSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.option.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserAdmin(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.admin", data, &types.Response{})
+func (c *Client) UserAdmin(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.admin", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserAccess(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.access", data, &types.Response{})
+func (c *Client) UserAccess(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.access", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.fields", data, &types.Response{})
+func (c *Client) UserFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserCurrent(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.current", data, &types.Response{})
+func (c *Client) UserCurrent(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.current", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserGet(data interface{}) (*users.UsersResponse, error) {
-	resp, err := c.DoRaw("user.get", data, &users.UsersResponse{})
+func (c *Client) UserGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*users.UsersResponse), err
+	return resp, err
 }
 
-func (c *Client) UserSearch(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.search", data, &types.Response{})
+func (c *Client) UserSearch(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.search", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.add", data, &types.Response{})
+func (c *Client) UserAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.update", data, &types.Response{})
+func (c *Client) UserUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserOnline(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.online", data, &types.Response{})
+func (c *Client) UserOnline(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.online", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) UserCounters(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("user.counters", data, &types.Response{})
+func (c *Client) UserCounters(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("user.counters", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

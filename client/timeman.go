@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) TimemanSettings(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.settings", data, &types.Response{})
+func (c *Client) TimemanSettings(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.settings", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanStatus(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.status", data, &types.Response{})
+func (c *Client) TimemanStatus(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.status", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanOpen(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.open", data, &types.Response{})
+func (c *Client) TimemanOpen(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.open", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanClose(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.close", data, &types.Response{})
+func (c *Client) TimemanClose(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.close", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) TimemanPause(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("timeman.pause", data, &types.Response{})
+func (c *Client) TimemanPause(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("timeman.pause", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

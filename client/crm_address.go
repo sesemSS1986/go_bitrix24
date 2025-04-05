@@ -2,42 +2,42 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CrmAddressFields(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.address.fields", data, &types.Response{})
+func (c *Client) CrmAddressFields(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.address.fields", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAddressAdd(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.address.add", data, &types.Response{})
+func (c *Client) CrmAddressAdd(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.address.add", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAddressUpdate(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.address.update", data, &types.Response{})
+func (c *Client) CrmAddressUpdate(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.address.update", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAddressList(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.address.list", data, &types.Response{})
+func (c *Client) CrmAddressList(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.address.list", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CrmAddressDelete(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("crm.address.delete", data, &types.Response{})
+func (c *Client) CrmAddressDelete(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("crm.address.delete", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }

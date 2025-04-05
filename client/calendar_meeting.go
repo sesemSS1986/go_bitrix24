@@ -2,26 +2,26 @@ package client
 
 import "github.com/sesemSS1986/go_bitrix24/types"
 
-func (c *Client) CalendarMeetingStatusSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.meeting.status.set", data, &types.Response{})
+func (c *Client) CalendarMeetingStatusSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.meeting.status.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarMeetingParamsSet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.meeting.params.set", data, &types.Response{})
+func (c *Client) CalendarMeetingParamsSet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.meeting.params.set", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
 
-func (c *Client) CalendarMeetingStatusGet(data interface{}) (*types.Response, error) {
-	resp, err := c.DoRaw("calendar.meeting.status.get", data, &types.Response{})
+func (c *Client) CalendarMeetingStatusGet(p Parameters) (result map[string]interface{}, err error) {
+	resp, err := c.Request("calendar.meeting.status.get", p)
 	if err != nil {
 		return nil, err
 	}
-	return resp.Result().(*types.Response), err
+	return resp, err
 }
